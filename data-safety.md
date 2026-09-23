@@ -28,7 +28,7 @@ Not collected: name, email, address, phone, location, contacts, messages, photos
 | Question | Answer |
 |---|---|
 | Is all user data encrypted in transit? | Yes (RevenueCat SDK uses HTTPS) |
-| Do you provide a way for users to request deletion? | Yes — contact address in the privacy policy; RevenueCat customer deletion on request |
+| Do you provide a way for users to request deletion? | Yes — email jhyang123494@gmail.com; RevenueCat customer deletion on request |
 | Data handling practices | Data is not sold; not used for advertising or marketing; not used for personalization beyond crediting the user's own purchases |
 | Account creation | None; purchases are tied to the Google Play account and an anonymous ID |
 

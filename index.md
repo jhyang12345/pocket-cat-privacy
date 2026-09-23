@@ -3,7 +3,7 @@
 **Effective date:** 2026-09-22
 **App:** Pocket Cat for Android (package `com.pocketcat.galchi`)
 **Developer:** the Pocket Cat developer, GitHub account `jhyang12345`
-**Contact:** [contact email to be added before publication]
+**Contact:** [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com)
 
 Pocket Cat is a small offline game about caring for one cat. This policy explains what the app stores, what it shares, and what it does not do.
 
@@ -49,7 +49,7 @@ Pocket Cat is not directed at children under 13 and does not knowingly collect p
 
 - Uninstalling the app, or clearing its data in Android settings, deletes the game save and the photo album from your device.
 - Backed-up copies are removed according to Google's backup retention.
-- If purchases are enabled and you want the RevenueCat record associated with your installation deleted, contact the address above with the approximate purchase date; we will request deletion from RevenueCat. Google Play keeps its own purchase records under its terms.
+- If purchases are enabled and you want the RevenueCat record associated with your installation deleted, email jhyang123494@gmail.com with the approximate purchase date; we will request deletion from RevenueCat. Google Play keeps its own purchase records under its terms.
 
 ## Changes to this policy
 
