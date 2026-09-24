@@ -20,8 +20,8 @@ Collection and sharing to declare:
 
 | Data type | Collected | Shared | Ephemeral | Required | Purposes |
 |---|---|---|---|---|---|
-| Financial info → **Purchase history** | Yes | Yes (RevenueCat, service provider) | No | Required for purchase features | App functionality, fraud prevention |
-| Device or other IDs | Yes (anonymous app user ID generated per install; device/app metadata RevenueCat records) | Yes (RevenueCat) | No | Required for purchase features | App functionality, fraud prevention |
+| Financial info → **Purchase history** | Yes | No — RevenueCat is a service provider, which Play does not count as sharing | No | Required for purchase features | App functionality, fraud prevention |
+| Device or other IDs | Yes (anonymous app user ID generated per install; device/app metadata RevenueCat records) | No (RevenueCat, service provider) | No | Required for purchase features | App functionality, fraud prevention |
 
 Not collected: name, email, address, phone, location, contacts, messages, photos (album is on-device only, never uploaded), files, audio, health, browsing, app activity, crash logs, diagnostics, advertising ID.
 
@@ -32,7 +32,7 @@ Not collected: name, email, address, phone, location, contacts, messages, photos
 | Data handling practices | Data is not sold; not used for advertising or marketing; not used for personalization beyond crediting the user's own purchases |
 | Account creation | None; purchases are tied to the Google Play account and an anonymous ID |
 
-Switched 2026-09-25: the app declares INTERNET, ACCESS_NETWORK_STATE and BILLING from 0.5.1, and the privacy policy describes purchases in the present tense. Submit these answers with the 0.5.1 release.
+Submitted in Play Console 2026-09-25 with these answers; deletion link https://jhyang12345.github.io/pocket-cat-privacy/#deleting-your-data. Switched 2026-09-25: the app declares INTERNET, ACCESS_NETWORK_STATE and BILLING from 0.5.1, and the privacy policy describes purchases in the present tense. Submit these answers with the 0.5.1 release.
 
 ## Store listing fields that reference these documents
 
