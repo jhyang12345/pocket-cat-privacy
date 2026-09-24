@@ -2,7 +2,7 @@
 
 Prepared 2026-09-22 for package `com.pocketcat.galchi`. Two states are recorded because the answers change when in-app purchases are switched on.
 
-## State A — current build (no purchases wired)
+## State A — builds up to 0.5.0 (no purchases wired; superseded)
 
 | Question | Answer |
 |---|---|
@@ -14,7 +14,7 @@ Prepared 2026-09-22 for package `com.pocketcat.galchi`. Two states are recorded 
 
 Rationale: the WebView blocks network loads, the manifest declares no permissions, there are no SDKs. The game save and photo album stay in app-private storage. Android Auto Backup is Google's system feature and does not count as developer collection.
 
-## State B — with Google Play Billing through RevenueCat
+## State B — current, from 0.5.1 (Google Play Billing through RevenueCat)
 
 Collection and sharing to declare:
 
@@ -32,7 +32,7 @@ Not collected: name, email, address, phone, location, contacts, messages, photos
 | Data handling practices | Data is not sold; not used for advertising or marketing; not used for personalization beyond crediting the user's own purchases |
 | Account creation | None; purchases are tied to the Google Play account and an anonymous ID |
 
-Before switching to State B: add the INTERNET permission, update the privacy policy's purchases section from "when enabled" to present tense, and re-submit the Data Safety form in the same release.
+Switched 2026-09-25: the app declares INTERNET, ACCESS_NETWORK_STATE and BILLING from 0.5.1, and the privacy policy describes purchases in the present tense. Submit these answers with the 0.5.1 release.
 
 ## Store listing fields that reference these documents
 
