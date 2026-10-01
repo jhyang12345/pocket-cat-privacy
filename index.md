@@ -1,55 +1,69 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-09-25
+**Effective date:** 2026-10-01
+
 **App:** Pocket Cat for Android (package `com.pocketcat.galchi`)
+
 **Developer:** the Pocket Cat developer, GitHub account `jhyang12345`
+
 **Contact:** [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com)
 
-Pocket Cat is a small offline game about caring for one cat. This policy explains what the app stores, what it shares, and what it does not do.
+Pocket Cat is a game about caring for one cat. You can play as a guest on your device, or sign in with Google to keep a cloud save for recovery after reinstalling or changing devices.
 
 ## The short version
 
-- The app has **no account, no login, no ads and no analytics**.
-- Gameplay works **offline**. The game's content is bundled inside the app. The only network traffic is for in-app purchases, described below.
-- Everything you do in the game is stored **on your device**.
-- Optional in-app purchases are processed by **Google Play** and verified by **RevenueCat**. The section below describes exactly what is shared.
+- Core gameplay works offline. Guest progress stays on your device.
+- Optional Google sign-in uses Firebase Authentication. Signed-in game saves are stored in Google's Cloud Firestore.
+- Cloud saves include your cat, progress, gem balance, purchase-credit records and settings. Photo Mode pictures stay on your device.
+- Optional gem purchases use Google Play and RevenueCat. Their account and purchase records are described below.
+- Pocket Cat has no advertising, does not sell your data, and does not include a separate gameplay analytics or crash-reporting SDK. Purchase providers also use purchase information for their operational reporting.
+- Uninstalling the app does not delete your cloud account or cloud save. You can [request account and data deletion](delete-account/), including without reinstalling the app.
 
-## What the app stores on your device
+## Data on your device
 
-The game save is a small file in the app's private storage. It contains:
+The game save is kept in the app's private storage. It contains the cat's name and coat, Bond progress, gems earned and spent, purchase credits, treats and cosmetics owned or equipped, and settings such as language and reduced motion.
 
-- the cat's name and coat you chose,
-- Bond progress, gem balance and a record of gems earned and spent,
-- treats and cosmetics you own and have equipped,
-- gameplay settings such as reduced motion.
+Photo Mode keeps a local album in app-private storage. Pictures are not uploaded to Firebase or RevenueCat. Exporting a picture writes it to the location you choose in Android's file picker. Copies you export remain in that location until you remove them yourself.
 
-Photo Mode keeps a local album of pictures you take, stored in the app's private storage. When you export a picture, it is written only to the folder you pick in Android's file picker.
+The app uses internet access, network-state access and Google Play Billing for sign-in, cloud saving and purchases. It does not request access to your location, contacts, camera or microphone.
 
-The app requests only the permissions needed for purchases: internet access, network state, and Google Play Billing. It does not access your location, contacts, camera, microphone, or files outside its own storage.
+## Google sign-in and cloud saves
 
-## Backup
+Google sign-in is optional for core gameplay. It creates a Pocket Cat account in Firebase Authentication using your Google account. Firebase receives account identifiers and your email address, and can receive the display name and profile-picture URL provided by Google. Pocket Cat does not receive your Google password or access to your email inbox.
 
-If you have Android backup enabled on your device, the game save is included in your Google account's app backup and in device-to-device transfer, under Google's backup terms. The photo album and caches are not backed up. You can turn app backup off in your device settings.
+Cloud Firestore stores your current game save under your Firebase user ID. The save includes the information listed under “Data on your device,” together with a save revision, integrity hash, update time and a randomly generated installation identifier used to coordinate saves. It does not contain the Photo Mode album. Email and Google profile details are handled by Authentication rather than copied into the game-save document.
+
+This information provides account management, cloud recovery and coordination between devices. Firebase also processes IP addresses and app/device information for authentication, service operation and abuse prevention. Firebase Authentication is processed in the United States; other Google services may process information internationally. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
+
+Sign in with the same Google account on another device to recover the last successfully uploaded save. Offline changes, failed uploads and guest progress may not be recoverable. Signing out or uninstalling does not remove an existing cloud save. Pocket Cat keeps the current cloud save while the account exists; there is no automatic inactivity-expiry period.
+
+## Android backup
+
+If Android backup is enabled, Android may back up the local game save and eligible app settings or transfer them between devices under Google's backup terms. The Photo Mode album and caches are excluded. This system backup is separate from the Pocket Cat cloud save and is not a guarantee that your latest progress will be restored. You can manage Android backup in your device settings.
 
 ## In-app purchases
 
-Pocket Cat sells optional packs of gems, the game's single currency, as one-time purchases. Care, play and the room are free; gems buy extra treats and cosmetics.
+Pocket Cat sells optional one-time gem packs. Core care, play and the room are free. The app requires a protected cloud account before starting new gem-pack purchases so purchase credits and the remaining balance can be saved with your cat.
 
-- **Google Play** handles the purchase and your payment method. Pocket Cat never sees card or bank details. Google's handling of that data is described in the [Google Play Terms of Service](https://play.google.com/about/play-terms/) and [Google Privacy Policy](https://policies.google.com/privacy).
-- **RevenueCat**, a purchase-verification service, receives the Google Play purchase token, the product bought, an anonymous app user identifier generated for your installation, and basic device and app information needed to validate the purchase and process refunds. RevenueCat's handling of that data is described in the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
-- Pocket Cat uses the verified purchase history to credit gems, and to restore purchased gems after a reinstall. Gems have no cash value and cannot be transferred.
+- **Google Play** handles payment. Pocket Cat does not receive card or bank details. Google's handling of payment records is covered by the [Google Play Terms of Service](https://play.google.com/about/play-terms/) and [Google Privacy Policy](https://policies.google.com/privacy).
+- **RevenueCat** verifies purchases and processes purchase history and refunds. It receives purchase tokens, products and transaction information, an app-user identifier, and service-related app/device information. Its customer records can include country information from a transaction or the connection's IP address. The identifier is anonymous before account linking and uses your Firebase user ID after linking. Pocket Cat does not set your Google email or display name as RevenueCat customer attributes. See the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
+- **The cloud save** contains your remaining gem balance and purchase-credit ledger. Recovering this save restores its recorded state. Consumed gem packs are not a promise of a fresh balance after reinstalling, and restoring purchase history must not grant gems that were already spent. Gems have no cash value and cannot be transferred.
 
-No purchase data is used for advertising or sold to anyone.
+Firebase and RevenueCat process information as service providers for these features. Purchase information is used for purchase handling, provider reporting and fraud prevention; it is not used for advertising or sold by Pocket Cat.
+
+## Retention and deletion
+
+In the app, open **Settings → Account & cloud save → Delete cloud account** and confirm the linked Google account. This removes the current Firestore cloud save and requests deletion of the Firebase Authentication account. Your cat and Photo Mode album remain on this device as guest data. Clear the app's data or uninstall it to remove those local copies. Previously exported photos need to be removed separately.
+
+For an account or data deletion request without the app, use the [Pocket Cat deletion page](delete-account/) or email [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com). We may ask for information needed to verify ownership. You can also request deletion of RevenueCat purchase records associated with your account or installation; those records are not automatically removed by the app's cloud-account deletion button. Purchase details can help locate an old anonymous installation record.
+
+Firebase documents that logged Authentication IP addresses are kept for a few weeks and that other Authentication information is removed from its live and backup systems within 180 days after account deletion is initiated. Google Play payment records and Android backups follow Google's own retention and account controls. Removing a Pocket Cat account does not delete your Google account, cancel a payment or issue a refund.
+
+Support emails contain the information you choose to send and are used to verify and handle your request. We will explain any verification needed or records that cannot be removed, and why, when responding. Do not send passwords, payment-card details or purchase tokens.
 
 ## Children
 
-Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. The app contains no chat, no user-generated content sharing, and no advertising.
-
-## Deleting your data
-
-- Uninstalling the app, or clearing its data in Android settings, deletes the game save and the photo album from your device.
-- Backed-up copies are removed according to Google's backup retention.
-- If you want the RevenueCat record associated with your installation deleted, email jhyang123494@gmail.com with the approximate purchase date; we will request deletion from RevenueCat. Google Play keeps its own purchase records under its terms.
+Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. It has no chat, public user-content sharing or advertising.
 
 ## Changes to this policy
 
