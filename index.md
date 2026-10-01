@@ -14,24 +14,24 @@ Pocket Cat is a game about caring for one cat. You can play as a guest on your d
 
 - Core gameplay works offline. Guest progress stays on your device.
 - Optional Google sign-in uses Firebase Authentication. Signed-in game saves are stored in Google's Cloud Firestore.
-- Cloud saves include your cat, progress, gem balance, purchase-credit records and settings. Photo Mode pictures stay on your device.
+- Cloud saves include your cat, progress, gem balance, purchase-credit records and saved gameplay preferences. Photo Mode pictures stay on your device.
 - Optional gem purchases use Google Play and RevenueCat. Their account and purchase records are described below.
 - Pocket Cat has no advertising, does not sell your data, and does not include a separate gameplay analytics or crash-reporting SDK. Purchase providers also use purchase information for their operational reporting.
 - Uninstalling the app does not delete your cloud account or cloud save. You can [request account and data deletion](delete-account/), including without reinstalling the app.
 
 ## Data on your device
 
-The game save is kept in the app's private storage. It contains the cat's name and coat, Bond progress, gems earned and spent, purchase credits, treats and cosmetics owned or equipped, and settings such as language and reduced motion.
+The game save is kept in the app's private storage. It contains the cat's name and coat, Bond progress, gems earned and spent, purchase credits, treats and cosmetics owned or equipped, saved camera preferences and postcard metadata. Device preferences such as language and reduced motion are stored separately in the app's local WebView storage.
 
-Photo Mode keeps a local album in app-private storage. Pictures are not uploaded to Firebase or RevenueCat. Exporting a picture writes it to the location you choose in Android's file picker. Copies you export remain in that location until you remove them yourself.
+Photo Mode keeps a local album in app-private storage. Pictures are not uploaded to Firebase or RevenueCat. Exporting a picture writes it to the public **Pictures/Pocket Cat** folder and makes it available in the device's gallery. Exported copies remain there until you remove them yourself.
 
-The app uses internet access, network-state access and Google Play Billing for sign-in, cloud saving and purchases. It does not request access to your location, contacts, camera or microphone.
+The app uses internet access, network-state access and Google Play Billing for sign-in, cloud saving and purchases. Android 8 and 9 require storage-write permission to export pictures to the public Pictures folder; newer Android versions use MediaStore. The app does not request access to your location, contacts, camera or microphone.
 
 ## Google sign-in and cloud saves
 
 Google sign-in is optional for core gameplay. It creates a Pocket Cat account in Firebase Authentication using your Google account. Firebase receives account identifiers and your email address, and can receive the display name and profile-picture URL provided by Google. Pocket Cat does not receive your Google password or access to your email inbox.
 
-Cloud Firestore stores your current game save under your Firebase user ID. The save includes the information listed under “Data on your device,” together with a save revision, integrity hash, update time and a randomly generated installation identifier used to coordinate saves. It does not contain the Photo Mode album. Email and Google profile details are handled by Authentication rather than copied into the game-save document.
+Cloud Firestore stores your current native game save under your Firebase user ID. It includes the cat and economy record, saved camera preferences and postcard metadata, together with a save revision, integrity hash, update time and a randomly generated installation identifier used to coordinate saves. It does not contain the Photo Mode album or device preferences held separately in WebView storage, such as language and reduced motion. Email and Google profile details are handled by Authentication rather than copied into the game-save document.
 
 This information provides account management, cloud recovery and coordination between devices. Firebase also processes IP addresses and app/device information for authentication, service operation and abuse prevention. Firebase Authentication is processed in the United States; other Google services may process information internationally. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
@@ -43,7 +43,7 @@ If Android backup is enabled, Android may back up the local game save and eligib
 
 ## In-app purchases
 
-Pocket Cat sells optional one-time gem packs. Core care, play and the room are free. The app requires a protected cloud account before starting new gem-pack purchases so purchase credits and the remaining balance can be saved with your cat.
+Pocket Cat sells optional one-time gem packs. Core care, play and the room are free. Guest players can purchase gems; linking a Google account is optional. Only successfully uploaded cloud saves provide Pocket Cat account recovery of the saved balance and purchase-credit ledger.
 
 - **Google Play** handles payment. Pocket Cat does not receive card or bank details. Google's handling of payment records is covered by the [Google Play Terms of Service](https://play.google.com/about/play-terms/) and [Google Privacy Policy](https://policies.google.com/privacy).
 - **RevenueCat** verifies purchases and processes purchase history and refunds. It receives purchase tokens, products and transaction information, an app-user identifier, and service-related app/device information. Its customer records can include country information from a transaction or the connection's IP address. The identifier is anonymous before account linking and uses your Firebase user ID after linking. Pocket Cat does not set your Google email or display name as RevenueCat customer attributes. See the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).

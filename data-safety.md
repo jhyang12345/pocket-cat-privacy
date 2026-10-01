@@ -2,7 +2,7 @@
 
 Prepared **2026-10-01** for `com.pocketcat.galchi`, for the upcoming Google sign-in and Firebase cloud-save release. **These new answers have not been submitted to Play Console.** The previous purchase-only answers were submitted on 2026-09-25; that historical version remains in Git history.
 
-The app offers guest gameplay, optional Google account linking and cloud saving, and Google Play gem purchases verified by RevenueCat. New purchases require a protected cloud account. Photo Mode pictures remain local. The release owner must review this draft against the final SDK versions, provider configuration and release build before submission.
+The app offers guest gameplay and purchases, optional Google account linking and cloud saving, and Google Play gem purchases verified by RevenueCat. A Pocket Cat cloud account is not required to buy gems. Photo Mode pictures remain local; exports are written to public Pictures/Pocket Cat through MediaStore or legacy storage permission on Android 8 and 9. The release owner must review this draft against the final SDK versions, provider configuration and release build before submission.
 
 ## Overall form answers
 
@@ -28,10 +28,12 @@ The app offers guest gameplay, optional Google account linking and cloud saving,
 | Personal info: **Name** | Google display name may be populated in Firebase Authentication, even though game UI uses email | Optional account feature | No | App functionality, account management |
 | Financial info: **Purchase history** | Google Play transaction/product/purchase-token information in RevenueCat; purchase-credit ledger in cloud save | RevenueCat recommends **required** for an integrated purchase SDK; cloud ledger is optional cloud saving | No | App functionality, Analytics (provider purchase reporting), fraud prevention/security |
 | App activity: **Other user-generated content** | Player-entered cat name in cloud save | Optional cloud saving | No | App functionality |
-| App activity: **Other actions** | Bond/progress, earned/spent gems, treats, cosmetics and game settings in cloud save | Optional cloud saving | No | App functionality |
+| App activity: **Other actions** | Bond/progress, earned/spent gems, treats, cosmetics, saved camera preferences and postcard metadata in cloud save | Optional cloud saving | No | App functionality |
 | Device or other IDs | Random installation writer ID in Firestore; review SDK identifiers generated at startup | Cloud writer ID optional; mark required if any declared SDK identifier is collected without a user choice | No | App functionality, fraud prevention/security |
 
 Draft **Collected: Yes, Shared: No** for these rows, subject to the service-provider exception above. Data stored only on the device is not developer collection under Play's definition.
+
+Cloud sync uploads the native save map. Device preferences held separately in WebView localStorage, including language and reduced motion, are not included. Do not promise that every app setting transfers with a cloud save. Photo image bytes are local even when associated postcard metadata is included in a native save.
 
 The Google account profile-picture URL may be populated by Firebase Authentication. Inspect a real test account and its provider data before submission and include the applicable profile-image disclosure if it is received/stored. “Photo Mode album is local” does not cover a Google profile image supplied during sign-in.
 
