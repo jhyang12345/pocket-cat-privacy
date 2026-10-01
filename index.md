@@ -51,7 +51,7 @@ The shop offers a short video ad you can choose to watch for a few gems, a limit
 - **What RevenueCat receives:** the anonymous app user identifier for your installation, ad events (loaded, shown, revenue) and the reward verification result. RevenueCat confirms with Google that the ad was completed so that gems are only credited for a finished ad.
 - **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads.
 
-If you never tap the shop ad, the app does not request ads.
+Nothing ad-related starts until you open the shop: the consent form, the ads SDK and the first ad request all wait for that. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it.
 
 ## Children
 

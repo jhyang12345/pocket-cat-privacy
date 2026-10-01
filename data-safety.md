@@ -41,16 +41,16 @@ Adds Google AdMob (rewarded video in the shop only) and RevenueCat ad-event trac
 | Data type | Collected | Shared | Ephemeral | Required | Purposes |
 |---|---|---|---|---|---|
 | Financial info → **Purchase history** | Yes | No (RevenueCat, service provider) | No | Required for purchase features | App functionality, fraud prevention |
-| Device or other IDs | Yes — anonymous app user ID (RevenueCat); advertising ID and app set ID (AdMob SDK) | **Yes** — Google AdMob | No | Optional (only when the user chooses the rewarded ad) | Advertising or marketing, analytics, fraud prevention, security and compliance; app functionality for the RevenueCat ID |
-| Location → **Approximate location** | Yes (derived from IP by the AdMob SDK) | **Yes** — Google AdMob | No | Optional | Advertising or marketing, analytics, fraud prevention |
-| App activity → **App interactions** | Yes (ad impressions, clicks, completions; RevenueCat ad events) | **Yes** — Google AdMob | No | Optional | Advertising or marketing, analytics, app functionality (reward verification) |
-| App info and performance → **Diagnostics** | Yes (AdMob SDK: app and SDK performance such as launch time and hang rate) | **Yes** — Google AdMob | No | Optional | Analytics, fraud prevention |
+| Device or other IDs | Yes — anonymous app user ID (RevenueCat); advertising ID and app set ID (AdMob SDK) | **Yes** — Google AdMob | No | Required | Advertising or marketing, analytics, fraud prevention, security and compliance; app functionality for the RevenueCat ID |
+| Location → **Approximate location** | Yes (derived from IP by the AdMob SDK) | **Yes** — Google AdMob | No | Required | Advertising or marketing, analytics, fraud prevention |
+| App activity → **App interactions** | Yes (ad impressions, clicks, completions; RevenueCat ad events) | **Yes** — Google AdMob | No | Required | Advertising or marketing, analytics, app functionality (reward verification) |
+| App info and performance → **Diagnostics** | Yes (AdMob SDK: app and SDK performance such as launch time and hang rate) | **Yes** — Google AdMob | No | Required | Analytics, fraud prevention |
 
 Notes:
 
 - Google's AdMob data disclosure guidance lists these types for the Mobile Ads SDK; check it again at submission time for SDK changes: https://developers.google.com/admob/android/privacy/play-data-disclosure
 - AdMob counts as **sharing** (Google acts as an independent party for ads), unlike RevenueCat, which is a service provider.
-- "Optional": no ad request is made unless the user taps the shop's rewarded-ad card, and in the EEA/UK/CH not before consent.
+- Declared **Required**, not Optional: the app preloads an ad once the shop is opened, so a player cannot use the shop without the SDK running (where consent allows). Nothing ad-related runs before the shop is first opened, and in the EEA/UK/CH nothing before consent.
 
 | Question | Answer |
 |---|---|
