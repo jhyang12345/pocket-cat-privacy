@@ -1,6 +1,6 @@
 # Pocket Cat privacy
 
-Public privacy documents for the **Pocket Cat** Android app (`com.pocketcat.galchi`).
+Public privacy documents for the **Pocket Cat** Android and iPhone apps (`com.pocketcat.galchi`).
 
 - [Privacy policy](index.md) — published at [the GitHub Pages site](https://jhyang12345.github.io/pocket-cat-privacy/).
 - [Account and data deletion](delete-account.md) — the public request route at [/delete-account/](https://jhyang12345.github.io/pocket-cat-privacy/delete-account/).
