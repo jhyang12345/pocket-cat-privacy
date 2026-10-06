@@ -16,7 +16,7 @@ Pocket Cat is a game about caring for one cat. You can play as a guest on your d
 - Optional sign-in uses Firebase Authentication: Google on Android, Sign in with Apple or Google on iPhone. Signed-in game saves are stored in Google's Cloud Firestore.
 - Cloud saves include your cat, progress, gem balance, purchase-credit records and saved gameplay preferences. Photo Mode pictures stay on your device.
 - Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat. Their account and purchase records are described below.
-- On Android, the only ad is an **optional rewarded video in the shop**, served by Google AdMob. You choose to watch it in exchange for gems; nothing in the game requires it, and there are no banners or ads that interrupt play. **The iPhone app shows no ads.**
+- The only ad is an **optional rewarded video in the shop**, served by Google AdMob. You choose to watch it in exchange for gems; nothing in the game requires it, and there are no banners or ads that interrupt play.
 - Pocket Cat does not sell your data and does not include a separate gameplay analytics or crash-reporting SDK. Purchase and ad providers also use information for their operational reporting.
 - Uninstalling the app does not delete your cloud account or cloud save. You can [request account and data deletion](delete-account/), including without reinstalling the app.
 
@@ -28,7 +28,7 @@ Photo Mode keeps a local album in app-private storage. Pictures are not uploaded
 
 On Android, the app uses internet access, network-state access and Google Play Billing for sign-in, cloud saving, purchases and the optional ad, and the advertising ID permission that the Google Mobile Ads SDK adds. Android 8 and 9 require storage-write permission to export pictures to the public Pictures folder; newer Android versions use MediaStore. The app does not request access to your location, contacts, camera or microphone.
 
-On iPhone, the game save is kept in the app's private Application Support folder and the Photo Mode album in the app's local web storage. Saving a picture adds it to your Photos library. Pocket Cat asks only for add-only access, so it cannot see or read anything else in your library. If you turn postcards on, iOS asks whether Pocket Cat may send notifications; postcards are scheduled on your device and no notification server is involved. The iPhone app does not request access to your location, contacts, camera or microphone, never asks to track you, and does not read the device's advertising identifier.
+On iPhone, the game save is kept in the app's private Application Support folder and the Photo Mode album in the app's local web storage. Saving a picture adds it to your Photos library. Pocket Cat asks only for add-only access, so it cannot see or read anything else in your library. If you turn postcards on, iOS asks whether Pocket Cat may send notifications; postcards are scheduled on your device and no notification server is involved. The iPhone app does not request access to your location, contacts, camera or microphone. It never asks to track you, so iOS does not give the app or its ads SDK your device's advertising identifier.
 
 ## Google sign-in and cloud saves
 
@@ -67,14 +67,12 @@ Firebase and RevenueCat process information as service providers for these featu
 
 ## Optional rewarded ad
 
-This section applies to the Android app. The iPhone app shows no ads and does not start the Google Mobile Ads SDK.
-
 The shop offers a short video ad you can choose to watch for a few gems, a limited number of times a day. Ads are served by **Google AdMob**. Nothing else in the app shows ads.
 
 - **Consent first.** In the EEA, the UK and Switzerland, the app asks for your consent with Google's consent form before any ad is requested. You can change your choice at any time from **Settings → Privacy options**.
-- **What Google AdMob receives** when an ad is requested or shown: your device's advertising ID and app set ID, approximate location derived from your IP address, information about the ad and your interaction with it, and app and SDK performance (diagnostic) information. Google uses this to serve, measure and personalise ads (where you have allowed personalisation) and to prevent fraud. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
+- **What Google AdMob receives** when an ad is requested or shown: a device identifier (on Android, the advertising ID and app set ID; on iPhone, an identifier limited to the app or its developer, because Pocket Cat never asks to track you), approximate location derived from your IP address, information about the ad and your interaction with it, and app and SDK performance (diagnostic) information. Google uses this to serve, measure and personalise ads (where you have allowed personalisation) and to prevent fraud. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
 - **What RevenueCat receives:** the same app-user identifier used for purchases (anonymous, or your Firebase user ID after sign-in), ad events (loaded, shown, revenue) and the reward verification result. RevenueCat confirms with Google that the ad was completed so that gems are only credited for a finished ad.
-- **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads.
+- **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads. On iPhone, Pocket Cat never shows Apple's tracking prompt, so the advertising identifier is not available to it.
 
 Nothing ad-related starts until you open the shop: the consent form, the ads SDK and the first ad request all wait for that. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it.
 
@@ -90,7 +88,7 @@ Support emails contain the information you choose to send and are used to verify
 
 ## Children
 
-Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. It has no chat or public user-content sharing. Its only advertising is the optional rewarded ad in the Android app described above, limited to ad content suitable for general audiences with parental guidance (PG).
+Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. It has no chat or public user-content sharing. Its only advertising is the optional rewarded ad described above, limited to ad content suitable for general audiences with parental guidance (PG).
 
 ## Changes to this policy
 
