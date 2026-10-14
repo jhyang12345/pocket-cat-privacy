@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-10-04 (Android from version 0.5.14; iPhone from version 0.5.25)
+**Effective date:** 2026-10-15 (Android from version 0.5.14; iPhone from version 0.5.25, with the rewarded ad from version 0.5.79)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.galchi`)
 
