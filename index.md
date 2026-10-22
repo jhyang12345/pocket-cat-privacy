@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-10-15 (Android from version 0.5.14; iPhone from version 0.5.25, with the rewarded ad from version 0.5.79)
+**Effective date:** 2026-10-22 (Android from version 0.5.14; iPhone from version 0.5.25, with the rewarded ad from version 0.5.79)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.galchi`)
 
@@ -16,7 +16,7 @@ Pocket Cat is a game about caring for one cat. You can play as a guest on your d
 - Optional sign-in uses Firebase Authentication: Google on Android, Sign in with Apple or Google on iPhone. Signed-in game saves are stored in Google's Cloud Firestore.
 - Cloud saves include your cat, progress, gem balance, purchase-credit records and saved gameplay preferences. Photo Mode pictures stay on your device.
 - Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat. Their account and purchase records are described below.
-- The only ad is an **optional rewarded video in the shop**, served by Google AdMob. You choose to watch it in exchange for gems; nothing in the game requires it, and there are no banners or ads that interrupt play.
+- The only ad is an **optional rewarded video in the shop**, requested through Google AdMob; on Android it may come from Meta Audience Network. You choose to watch it in exchange for gems; nothing in the game requires it, and there are no banners or ads that interrupt play.
 - Pocket Cat does not sell your data and does not include a separate gameplay analytics or crash-reporting SDK. Purchase and ad providers also use information for their operational reporting.
 - Uninstalling the app does not delete your cloud account or cloud save. You can [request account and data deletion](delete-account/), including without reinstalling the app.
 
@@ -67,10 +67,11 @@ Firebase and RevenueCat process information as service providers for these featu
 
 ## Optional rewarded ad
 
-The shop offers a short video ad you can choose to watch for a few gems, a limited number of times a day. Ads are served by **Google AdMob**. Nothing else in the app shows ads.
+The shop offers a short video ad you can choose to watch for a few gems, a limited number of times a day. Ads are requested through **Google AdMob**. On Android, AdMob holds an auction for each ad in which **Meta Audience Network** can also bid, so the video may come from Google or from Meta. On iPhone, ads come from Google AdMob only. Nothing else in the app shows ads.
 
-- **Consent first.** In the EEA, the UK and Switzerland, the app asks for your consent with Google's consent form before any ad is requested. You can change your choice at any time from **Settings → Privacy options**.
+- **Consent first.** In the EEA, the UK and Switzerland, the app asks for your consent with Google's consent form before any ad is requested. The form lists Meta among the ad partners, and your choice applies to it. You can change your choice at any time from **Settings → Privacy options**.
 - **What Google AdMob receives** when an ad is requested or shown: a device identifier (on Android, the advertising ID and app set ID; on iPhone, an identifier limited to the app or its developer, because Pocket Cat never asks to track you), approximate location derived from your IP address, information about the ad and your interaction with it, and app and SDK performance (diagnostic) information. Google uses this to serve, measure and personalise ads (where you have allowed personalisation) and to prevent fraud. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
+- **What Meta Audience Network receives** (Android only) when it bids for or shows an ad: the advertising ID, information about your device and the app, approximate location derived from your IP address, information about the ad and your interaction with it, and diagnostic information. Meta uses this to serve and measure ads and to prevent fraud. See the [Meta Privacy Policy](https://www.facebook.com/privacy/policy/).
 - **What RevenueCat receives:** the same app-user identifier used for purchases (anonymous, or your Firebase user ID after sign-in), ad events (loaded, shown, revenue) and the reward verification result. RevenueCat confirms with Google that the ad was completed so that gems are only credited for a finished ad.
 - **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads. On iPhone, Pocket Cat never shows Apple's tracking prompt, so the advertising identifier is not available to it.
 
@@ -82,13 +83,13 @@ In the app, open **Settings → Account & cloud save → Delete cloud account** 
 
 For an account or data deletion request without the app, use the [Pocket Cat deletion page](delete-account/) or email [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com). We may ask for information needed to verify ownership. You can also request deletion of RevenueCat purchase records associated with your account or installation; those records are not automatically removed by the app's cloud-account deletion button. Purchase details can help locate an old anonymous installation record.
 
-Firebase documents that logged Authentication IP addresses are kept for a few weeks and that other Authentication information is removed from its live and backup systems within 180 days after account deletion is initiated. Google Play and App Store payment records follow Google's and Apple's own retention policies, and device backups follow your Google or Apple backup settings. Removing a Pocket Cat account does not delete your Google or Apple account, cancel a payment or issue a refund. Ad data held by Google is governed by Google's own retention and controls; you can reset or delete your advertising ID at any time in Android settings.
+Firebase documents that logged Authentication IP addresses are kept for a few weeks and that other Authentication information is removed from its live and backup systems within 180 days after account deletion is initiated. Google Play and App Store payment records follow Google's and Apple's own retention policies, and device backups follow your Google or Apple backup settings. Removing a Pocket Cat account does not delete your Google or Apple account, cancel a payment or issue a refund. Ad data held by Google or Meta is governed by their own retention and controls; you can reset or delete your advertising ID at any time in Android settings.
 
 Support emails contain the information you choose to send and are used to verify and handle your request. We will explain any verification needed or records that cannot be removed, and why, when responding. Do not send passwords, payment-card details or purchase tokens.
 
 ## Children
 
-Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. It has no chat or public user-content sharing. Its only advertising is the optional rewarded ad described above, limited to ad content suitable for general audiences with parental guidance (PG).
+Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. It has no chat or public user-content sharing. Its only advertising is the optional rewarded ad described above. Google ads are limited to content suitable for general audiences with parental guidance (PG); Meta ads exclude sensitive categories such as gambling, alcohol, dating and sexually suggestive or adult content.
 
 ## Changes to this policy
 
