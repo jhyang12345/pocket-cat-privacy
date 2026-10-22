@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-10-15 (Android from version 0.5.14; iPhone from version 0.5.25, with the rewarded ad from version 0.5.79)
+**Effective date:** [set on publish] (Android from version [first version with gameplay statistics]; iPhone from the first version built on the shared game)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.galchi`)
 
@@ -8,87 +8,135 @@
 
 **Contact:** [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com)
 
-Pocket Cat is a game about caring for one cat. You can play as a guest on your device, or sign in to keep a cloud save for recovery after reinstalling or changing devices: with Google on Android, and with Apple or Google on iPhone.
+**한국어:** [개인정보 처리방침 (한국어)](ko/). For players in Korea, the Korean policy is the authoritative version and includes the items required by Korea's Personal Information Protection Act.
+
+Pocket Cat is a game about caring for one cat. You play on your device; no account is needed.
 
 ## The short version
 
-- Core gameplay works offline. Guest progress stays on your device.
-- Optional sign-in uses Firebase Authentication: Google on Android, Sign in with Apple or Google on iPhone. Signed-in game saves are stored in Google's Cloud Firestore.
-- Cloud saves include your cat, progress, gem balance, purchase-credit records and saved gameplay preferences. Photo Mode pictures stay on your device.
-- Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat. Their account and purchase records are described below.
-- The only ad is an **optional rewarded video in the shop**, served by Google AdMob. You choose to watch it in exchange for gems; nothing in the game requires it, and there are no banners or ads that interrupt play.
-- Pocket Cat does not sell your data and does not include a separate gameplay analytics or crash-reporting SDK. Purchase and ad providers also use information for their operational reporting.
-- Uninstalling the app does not delete your cloud account or cloud save. You can [request account and data deletion](delete-account/), including without reinstalling the app.
+- Core gameplay works offline. Your cat and your progress are saved on your device.
+- Pocket Cat sends gameplay statistics and crash reports to Google's Firebase so we can see where the game is confusing and fix crashes. They are tied to a random app ID, not to your name or any account, and never include your cat's name or anything you type. You can turn this off at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, nothing is sent unless you turn it on.
+- Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat.
+- Ads are **optional rewarded videos** served by Google AdMob: in the shop for a few gems, and in the minigames to get paws back or open the next levels early. You choose to watch them; nothing in the game requires it, and there are no banners or ads that interrupt play.
+- Pocket Cat does not sell your data.
+- If you signed in to an earlier version of Pocket Cat, that account and its cloud save still exist; see [Accounts from the earlier version](#accounts-from-the-earlier-version). You can [request account and data deletion](delete-account/) at any time.
 
 ## Data on your device
 
-The game save is kept in the app's private storage. It contains the cat's name and coat, Bond progress, gems earned and spent, purchase credits, treats and cosmetics owned or equipped, saved camera preferences and postcard metadata. Device preferences such as language and reduced motion are stored separately in the app's local WebView storage.
+The game save is kept in the app's private storage. It contains your cat's name and coat, Bond and progress, gems earned and spent and the identifiers of purchases and ad rewards (so nothing is credited twice), treats, accessories, rooms, wallpapers and floors you own, the furniture layout of each room, and your postcard progress. Device preferences such as language, sound, haptics, camera, room lighting and your choice about gameplay statistics are kept in the app's local preferences.
 
-Photo Mode keeps a local album in app-private storage. Pictures are not uploaded to Firebase or RevenueCat. On Android, exporting a picture writes it to the public **Pictures/Pocket Cat** folder and makes it available in the device's gallery. Exported copies remain there until you remove them yourself.
+Photos you take in the cat studio or Photo Mode stay in the app's private storage. Saving or sharing a photo hands that picture to your device's gallery or share sheet only when you choose to.
 
-On Android, the app uses internet access, network-state access and Google Play Billing for sign-in, cloud saving, purchases and the optional ad, and the advertising ID permission that the Google Mobile Ads SDK adds. Android 8 and 9 require storage-write permission to export pictures to the public Pictures folder; newer Android versions use MediaStore. The app does not request access to your location, contacts, camera or microphone.
+Postcards, if you turn them on, are scheduled on your device and shown as local notifications. No notification server is involved and nothing about them is sent to us.
 
-On iPhone, the game save is kept in the app's private Application Support folder and the Photo Mode album in the app's local web storage. Saving a picture adds it to your Photos library. Pocket Cat asks only for add-only access, so it cannot see or read anything else in your library. If you turn postcards on, iOS asks whether Pocket Cat may send notifications; postcards are scheduled on your device and no notification server is involved. The iPhone app does not request access to your location, contacts, camera or microphone. It never asks to track you, so iOS does not give the app or its ads SDK your device's advertising identifier.
+On Android, the app uses internet access, network-state access and Google Play Billing for statistics, purchases and the optional ads; the advertising ID permission added by the Google Mobile Ads SDK; the notification permission if you turn postcards on; and the install-referrer service that Google Analytics for Firebase reads to learn which store listing or link led to the install. The app does not request access to your location, contacts, camera or microphone.
 
-## Google sign-in and cloud saves
+On iPhone, saving a picture adds it to your Photos library with add-only access, so Pocket Cat cannot see or read anything else in your library. If you turn postcards on, iOS asks whether Pocket Cat may send notifications. Pocket Cat does not request access to your location, contacts, camera or microphone, and it never asks to track you, so iOS does not give the app or its ads SDK your device's advertising identifier.
 
-Google sign-in is optional for core gameplay. It creates a Pocket Cat account in Firebase Authentication using your Google account. Firebase receives account identifiers and your email address, and can receive the display name and profile-picture URL provided by Google. Pocket Cat does not receive your Google password or access to your email inbox.
+## Gameplay statistics and crash reports
 
-Cloud Firestore stores your current native game save under your Firebase user ID. It includes the cat and economy record, saved camera preferences and postcard metadata, together with a save revision, integrity hash, update time and a randomly generated installation identifier used to coordinate saves. It does not contain the Photo Mode album or device preferences held separately in WebView storage, such as language and reduced motion. Email and Google profile details are handled by Authentication rather than copied into the game-save document.
+Pocket Cat sends gameplay statistics through Google Analytics for Firebase and crash reports through Firebase Crashlytics. You can turn this off at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, it is off until you turn it on there. Everywhere else, including the United Kingdom and Korea, it is on until you turn it off. To tell which applies, the app uses your store account's country or, when that is not available, your SIM card's country or your phone's region setting. If none is available, it stays off. The country is used on your device only to choose this default and is not sent to us.
 
-This information provides account management, cloud recovery and coordination between devices. Firebase also processes IP addresses and app/device information for authentication, service operation and abuse prevention. Firebase Authentication is processed in the United States; other Google services may process information internationally. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
+**What is sent:** which screens you open and which game features you use (for example adopting, finishing a daily quest, starting or clearing a minigame, buying an item with gems, choosing to watch an optional ad, or moving rooms), how many days since adoption and how long you play, and, when the app crashes, technical details about the crash with your device model and system version. Each record carries a random identifier that Firebase creates for this installation. Google Analytics for Firebase also receives your IP address, from which it derives an approximate region, and on Android the install referrer described above.
 
-Sign in with the same account on another device to recover the last successfully uploaded save. Sign in with Apple is currently available only in the iPhone app, so a cloud save linked to an Apple account can be recovered on iPhone. Offline changes, failed uploads and guest progress may not be recoverable. Signing out or uninstalling does not remove an existing cloud save. Pocket Cat keeps the current cloud save while the account exists; there is no automatic inactivity-expiry period.
+**What is not sent:** your cat's name or anything you type, any Google or Apple account, your email, purchase receipts or tokens, your game save, your precise location, photos, or the advertising identifier. Statistics are not used for advertising and are not combined with data from other apps.
 
-## Sign in with Apple (iPhone)
+**Turning it off** stops statistics and crash reports immediately, resets the random identifier on your device and deletes crash reports that have not been sent yet.
 
-On iPhone you can also sign in with Apple. Firebase Authentication receives a stable user identifier from Apple, an email address, and your name if you choose to share it the first time you sign in. If you choose Hide My Email, Apple provides a private relay address that forwards to your real address. Pocket Cat does not receive your Apple Account password. The cloud save works the same way as with Google sign-in, as described above.
+**How long it is kept:**
 
-Pocket Cat checks at launch whether you still allow Sign in with Apple and signs out on the device if you have stopped using it with Pocket Cat. When you delete your cloud account in the app, Pocket Cat also revokes its Sign in with Apple authorization. You can stop using Sign in with Apple with Pocket Cat at any time in your Apple Account settings. See the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
+- Google Analytics keeps event-level data for **2 months**.
+- Raw events copied for analysis are kept for up to **90 days**.
+- Crash reports are kept for **90 days**.
+- Totals that cannot identify an installation, such as how many players finished a chapter on a given day, may be kept for up to **13 months**.
+
+This data is not linked to an account, so it cannot be looked up from your name or email. To ask us to delete it, contact us and include the date you installed the app.
+
+Google processes this data for us as a service provider. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
+
+## Accounts from the earlier version
+
+The earlier version of Pocket Cat let you sign in to keep a cloud save: with Google on Android, and with Apple or Google on iPhone. If you signed in, those records still exist:
+
+- **Firebase Authentication** holds your account: a user identifier, your email address, and the name and profile-picture URL your provider shared. With Sign in with Apple, it may hold an Apple private relay address instead of your email.
+- **Cloud Firestore** holds that version's cloud save under your user identifier: your cat and progress, gem balance and purchase-credit records, saved gameplay preferences and postcard metadata, with a save revision, an update time and a random installation identifier.
+- **RevenueCat** may continue to use your Firebase user identifier as your purchase identity on that device, so earlier purchases stay connected.
+
+The current version does not offer sign-in yet. Optional sign-in and cloud saving will return in a later update, and this policy will be updated before it does. Until then, use the [deletion page](delete-account/) or email us to delete an earlier account and its cloud save.
+
+Firebase Authentication is processed in the United States; other Google services may process information internationally. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Apple Privacy Policy](https://www.apple.com/legal/privacy/) for Sign in with Apple.
 
 ## Device backups
 
-If Android backup is enabled, Android may back up the local game save and eligible app settings or transfer them between devices under Google's backup terms. The Photo Mode album and caches are excluded. You can manage Android backup in your device settings.
+If Android backup is enabled, Android may back up the game save and the app's local preferences, or transfer them between devices, under Google's backup terms. The preferences include the anonymous purchase identity, so a restored save keeps its purchases. Photos, caches and the earlier version's web storage are excluded. You can manage Android backup in your device settings.
 
-On iPhone, iCloud Backup or a backup to a computer may include Pocket Cat's local game save under Apple's terms. The identifier Pocket Cat uses to coordinate cloud saves for this installation is excluded from backups.
+On iPhone, iCloud Backup or a backup to a computer may include Pocket Cat's local game save under Apple's terms.
 
-These system backups are separate from the Pocket Cat cloud save and are not a guarantee that your latest progress will be restored.
+These system backups are not a guarantee that your latest progress will be restored.
 
 ## In-app purchases
 
-Pocket Cat sells optional one-time gem packs. Core care, play and the room are free. Guest players can purchase gems; signing in is optional. Only successfully uploaded cloud saves provide Pocket Cat account recovery of the saved balance and purchase-credit ledger.
+Pocket Cat sells optional one-time gem packs. Care and play are always free, and gems can also be earned by playing. No account is needed to buy gems.
 
 - **Google Play** handles payment on Android. Pocket Cat does not receive card or bank details. Google's handling of payment records is covered by the [Google Play Terms of Service](https://play.google.com/about/play-terms/) and [Google Privacy Policy](https://policies.google.com/privacy).
 - **The App Store** handles payment on iPhone. Pocket Cat does not receive card or bank details. Apple's handling of payment records is covered by the [Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/) and the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
-- **RevenueCat** verifies purchases and processes purchase history and refunds. It receives Google Play purchase tokens or App Store transaction information, products and transaction details, an app-user identifier, and service-related app/device information. Its customer records can include country information from a transaction or the connection's IP address. The identifier is anonymous before account linking and uses your Firebase user ID after linking. Pocket Cat does not set your email or name as RevenueCat customer attributes. See the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
-- **The cloud save** contains your remaining gem balance and purchase-credit ledger. Recovering this save restores its recorded state. Consumed gem packs are not a promise of a fresh balance after reinstalling, and restoring purchase history must not grant gems that were already spent. Gems have no cash value and cannot be transferred.
+- **RevenueCat** verifies purchases and processes purchase history and refunds. It receives Google Play purchase tokens or App Store transaction information, products and transaction details, an app-user identifier, and service-related app/device information. Its customer records can include country information from a transaction or the connection's IP address. The identifier is anonymous, or the Firebase user identifier from an earlier sign-in. Pocket Cat does not send your email or name to RevenueCat. See the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
+- **Your gem balance** and purchase-credit ledger live in the game save on your device and in device backups. Gems have no cash value and cannot be transferred.
 
-Firebase and RevenueCat process information as service providers for these features. Purchase information is used for purchase handling, provider reporting and fraud prevention; it is not used for advertising or sold by Pocket Cat.
+RevenueCat processes information as a service provider. Purchase information is used for purchase handling, provider reporting and fraud prevention; it is not used for advertising or sold by Pocket Cat.
 
-## Optional rewarded ad
+## Optional rewarded ads
 
-The shop offers a short video ad you can choose to watch for a few gems, a limited number of times a day. Ads are served by **Google AdMob**. Nothing else in the app shows ads.
+You can choose to watch a short video ad, each a limited number of times a day:
+
+- in the shop, for a few gems;
+- in the minigames, to get paws back when they run out;
+- in the minigames, to open the next levels before tomorrow.
+
+Ads are served by **Google AdMob**. There are no banners and nothing interrupts play.
 
 - **Consent first.** In the EEA, the UK and Switzerland, the app asks for your consent with Google's consent form before any ad is requested. You can change your choice at any time from **Settings → Privacy options**.
-- **What Google AdMob receives** when an ad is requested or shown: a device identifier (on Android, the advertising ID and app set ID; on iPhone, an identifier limited to the app or its developer, because Pocket Cat never asks to track you), approximate location derived from your IP address, information about the ad and your interaction with it, and app and SDK performance (diagnostic) information. Google uses this to serve, measure and personalise ads (where you have allowed personalisation) and to prevent fraud. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
-- **What RevenueCat receives:** the same app-user identifier used for purchases (anonymous, or your Firebase user ID after sign-in), ad events (loaded, shown, revenue) and the reward verification result. RevenueCat confirms with Google that the ad was completed so that gems are only credited for a finished ad.
-- **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads. On iPhone, Pocket Cat never shows Apple's tracking prompt, so the advertising identifier is not available to it.
+- **When ads start.** The consent form, the ads SDK and the first ad request wait until an ad offer is first on screen, in the shop or in the minigames. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it.
+- **What Google AdMob receives** when an ad is requested or shown:
+  - a device identifier: on Android, the advertising ID and app set ID; on iPhone, an identifier limited to the app or its developer, because Pocket Cat never asks to track you;
+  - approximate location derived from your IP address;
+  - information about the ad and your interaction with it;
+  - app and SDK performance (diagnostic) information.
 
-Nothing ad-related starts until you open the shop: the consent form, the ads SDK and the first ad request all wait for that. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it.
+  Google uses this to serve, measure and personalise ads (where you have allowed personalisation) and to prevent fraud. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
+- **What RevenueCat receives:** the same app-user identifier used for purchases, ad events (loaded, shown, revenue) and the reward verification result. RevenueCat confirms with Google that the ad was completed, so a reward is only credited for a finished ad.
+- **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads.
+
+## Where data is processed
+
+Google (Firebase, AdMob, Google Play) and RevenueCat are based in the United States and may process data there and in other countries where they operate. Apple processes App Store payments under its own terms. Pocket Cat itself does not run servers that store your data. Players in Korea can find the overseas-transfer details required by Korean law in the [Korean policy](ko/#overseas-transfer).
+
+## Your choices and rights
+
+- Turn gameplay statistics and crash reports off in **Settings → Share usage and crash data**.
+- Change ad consent in **Settings → Privacy options** where it applies, and reset or delete your advertising ID in Android settings.
+- Ask us to access, correct or delete data we hold or can request from our providers: an earlier account and cloud save, RevenueCat purchase records, or gameplay statistics (include your install date). Email [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com) or use the [deletion page](delete-account/). We may ask for information needed to verify ownership and will reply with the result, including anything that cannot be removed and why.
+- To remove the data on your device, clear Pocket Cat's app data or uninstall it on Android, or delete the app on iPhone. Photos you saved to your gallery or Photos library stay there until you remove them.
 
 ## Retention and deletion
 
-In the app, open **Settings → Account & cloud save → Delete cloud account** and confirm the linked Apple or Google account. This removes the current Firestore cloud save and requests deletion of the Firebase Authentication account; for an Apple account, Pocket Cat also revokes its Sign in with Apple authorization. Your cat and Photo Mode album remain on this device as guest data. On Android, clear the app's data or uninstall it to remove those local copies; on iPhone, delete the app. Previously exported photos need to be removed separately from your gallery or the Photos app.
+- **On your device:** kept until you delete the app's data or the app.
+- **Gameplay statistics and crash reports:** as described above (2 months, up to 90 days of raw events, 90 days of crash reports, and up to 13 months of totals that identify no one).
+- **Earlier accounts and cloud saves:** kept while the account exists, and deleted when you ask. Firebase documents that logged Authentication IP addresses are kept for a few weeks, and that other Authentication information is removed from its live and backup systems within 180 days after deletion is initiated.
+- **RevenueCat purchase records:** deleted when you ask, within 30 days.
+- **Store payment records:** Google Play and App Store records follow Google's and Apple's own retention policies.
+- **Ad data:** data held by Google is governed by Google's own retention and controls.
+- **Support emails:** used to verify and handle your request.
 
-For an account or data deletion request without the app, use the [Pocket Cat deletion page](delete-account/) or email [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com). We may ask for information needed to verify ownership. You can also request deletion of RevenueCat purchase records associated with your account or installation; those records are not automatically removed by the app's cloud-account deletion button. Purchase details can help locate an old anonymous installation record.
-
-Firebase documents that logged Authentication IP addresses are kept for a few weeks and that other Authentication information is removed from its live and backup systems within 180 days after account deletion is initiated. Google Play and App Store payment records follow Google's and Apple's own retention policies, and device backups follow your Google or Apple backup settings. Removing a Pocket Cat account does not delete your Google or Apple account, cancel a payment or issue a refund. Ad data held by Google is governed by Google's own retention and controls; you can reset or delete your advertising ID at any time in Android settings.
-
-Support emails contain the information you choose to send and are used to verify and handle your request. We will explain any verification needed or records that cannot be removed, and why, when responding. Do not send passwords, payment-card details or purchase tokens.
+Deleting Pocket Cat data does not delete your Google or Apple account, cancel a payment or issue a refund. Do not send passwords, payment-card details or purchase tokens.
 
 ## Children
 
-Pocket Cat is not directed at children under 13 and does not knowingly collect personal information from them. It has no chat or public user-content sharing. Its only advertising is the optional rewarded ad described above, limited to ad content suitable for general audiences with parental guidance (PG).
+Pocket Cat is intended for players aged 13 and over. It is not directed at children under 13 and does not knowingly collect personal information from them. In Korea, the service is not directed at children under 14. It has no chat or public user-content sharing. Ads are limited to content suitable for general audiences with parental guidance (PG).
+
+## Privacy officer
+
+The person responsible for privacy at Pocket Cat is [개인정보 보호책임자 성명 / Owner's name], reachable at [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com).
 
 ## Changes to this policy
 
