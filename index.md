@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** [set on publish] (Android from version [first version with gameplay statistics]; iPhone from the first version built on the shared game)
+**Effective date:** 2026-10-23 (Android from the first update with gameplay statistics; iPhone from the first version built on the shared game)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.galchi`)
 
@@ -136,7 +136,7 @@ Pocket Cat is intended for players aged 13 and over. It is not directed at child
 
 ## Privacy officer
 
-The person responsible for privacy at Pocket Cat is [개인정보 보호책임자 성명 / Owner's name], reachable at [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com).
+Privacy questions and requests are handled by the Pocket Cat privacy contact (Pocket Cat 개인정보 담당), reachable at [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com).
 
 ## Changes to this policy
 
