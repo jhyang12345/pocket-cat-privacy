@@ -22,11 +22,11 @@
 | Can users request deletion of an account and its associated data? | **Yes**: the external request page now; in-app deletion returns with sign-in. RevenueCat records are deleted within 30 days of a request. |
 | Can users request data deletion without deleting an account? | **Yes**, via the support email request. |
 | Account/data deletion URL | `https://jhyang12345.github.io/pocket-cat-privacy/delete-account/` |
-| Ads | **Yes**: opt-in rewarded videos in the shop and the minigames (Google AdMob). Advertising ID declaration: Yes (analytics, advertising, fraud prevention). |
+| Ads | **Yes**: opt-in rewarded videos in the shop and the minigames (Google AdMob, with Meta Audience Network bidding through AdMob mediation on Android). Advertising ID declaration: Yes (analytics, advertising, fraud prevention). |
 | Independent security review | No |
 | Target audience / Families Policy | 13 and over; not a Families app. |
 
-"Not shared" below relies on Play's service-provider exception: Firebase and RevenueCat process information for Pocket Cat. Google AdMob is not a service provider for this purpose, so everything the Mobile Ads SDK receives is declared **shared**.
+"Not shared" below relies on Play's service-provider exception: Firebase and RevenueCat process information for Pocket Cat. Google AdMob and Meta Audience Network are not service providers for this purpose, so everything the Mobile Ads and Audience Network SDKs receive is declared **shared**. Play's form does not name recipients, so Meta adds no new answer.
 
 ## Data types and purposes
 
@@ -40,10 +40,10 @@
 | Financial info: **Purchase history** | Google Play purchase information in RevenueCat; purchase-credit ledger in cloud saves | Required (integrated purchase SDK) | App functionality, Analytics (provider purchase reporting), fraud prevention/security |
 | App activity: **Other user-generated content** | Cat name in cloud saves | Optional | App functionality |
 | App activity: **Other actions** | Progress, gems, items and preferences in cloud saves | Optional | App functionality |
-| **Device or other IDs** | RevenueCat anonymous app-user ID; random installation writer ID (cloud saves); **advertising ID and app set ID (AdMob SDK)** | **Required** | App functionality, analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob |
-| Location: **Approximate location** | IP-derived, Google Mobile Ads SDK; RevenueCat may infer country | **Required** | Analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob |
-| App activity: **App interactions** | Ad impressions, clicks and completions (AdMob); ad events and reward verification (RevenueCat) | **Required** | App functionality, analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob |
-| App info and performance: **Diagnostics** | AdMob SDK performance information | **Required** | Analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob |
+| **Device or other IDs** | RevenueCat anonymous app-user ID; random installation writer ID (cloud saves); **advertising ID and app set ID (AdMob SDK); advertising ID (Meta Audience Network SDK, Android)** | **Required** | App functionality, analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob and Meta |
+| Location: **Approximate location** | IP-derived, Google Mobile Ads SDK and Meta Audience Network SDK; RevenueCat may infer country | **Required** | Analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob and Meta |
+| App activity: **App interactions** | Ad impressions, clicks and completions (AdMob and Meta Audience Network SDKs); ad events and reward verification (RevenueCat) | **Required** | App functionality, analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob and Meta |
+| App info and performance: **Diagnostics** | AdMob and Meta Audience Network SDK performance information | **Required** | Analytics, advertising or marketing, fraud prevention/security. **Shared** with Google AdMob and Meta |
 
 ### Analytics release (add with the first build that sends statistics)
 
