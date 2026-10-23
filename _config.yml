@@ -1,3 +1,5 @@
 title: Pocket Cat
 description: Privacy policy and data safety information for the Pocket Cat Android and iPhone apps
 theme: jekyll-theme-minimal
+exclude:
+  - drafts

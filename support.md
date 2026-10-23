@@ -15,12 +15,14 @@ Email **[jhyang123494@gmail.com](mailto:jhyang123494@gmail.com?subject=Pocket%20
 
 **Never send your passwords, payment-card details or purchase tokens.** For a purchase problem, the order ID from your Google Play or App Store receipt is enough.
 
-## Your cat and your account
+## Your cat
 
-- Your cat is saved on your device. To keep a copy in the cloud, open **Settings → Account & cloud save** in the game and sign in: with Google on Android, and with Apple or Google on iPhone.
-- After reinstalling or changing phones, sign in with the same account to restore your last cloud save. Progress played only as a guest cannot be recovered from another device.
-- To delete your cloud account and data, see [Delete your Pocket Cat account and data](../delete-account/).
+- Your cat is saved on your device. Android backup or iCloud Backup may include the save, under your device's backup settings.
+- Cloud saving with an account will return in a later update. Until then, progress on one phone cannot be moved to another except through your device's own backup or transfer.
+- If you signed in to an earlier version of Pocket Cat, that account and its cloud save still exist. To delete them, see [Delete your Pocket Cat account and data](../delete-account/).
 
-## Privacy
+## Statistics, ads and privacy
 
-Read the [Pocket Cat privacy policy](../).
+- Turn gameplay statistics and crash reports off in **Settings → Share usage and crash data**.
+- Where it applies, change your ad consent in **Settings → Privacy options**.
+- Read the [Pocket Cat privacy policy](../) or the [한국어 개인정보 처리방침](../ko/).
