@@ -18,8 +18,9 @@ Email **[jhyang123494@gmail.com](mailto:jhyang123494@gmail.com?subject=Pocket%20
 ## Your cat
 
 - Your cat is saved on your device. Android backup or iCloud Backup may include the save, under your device's backup settings.
-- Cloud saving with an account will return in a later update. Until then, progress on one phone cannot be moved to another except through your device's own backup or transfer.
-- If you signed in to an earlier version of Pocket Cat, that account and its cloud save still exist. To delete them, see [Delete your Pocket Cat account and data](../delete-account/).
+- To keep a copy in the cloud, open **Settings → Account & cloud save** and sign in: with Google on Android, and with Apple or Google on iPhone. On Android, sign-in arrives with the update that brings it back; update the app if you don't see it.
+- After reinstalling or changing phones, sign in with the same account to restore your last cloud save. Progress played only as a guest cannot be recovered from another device.
+- To delete your cloud account, see [Delete your Pocket Cat account and data](../delete-account/).
 
 ## Statistics, ads and privacy
 
