@@ -9,7 +9,7 @@ permalink: /delete-account/
 
 **Developer:** GitHub account `jhyang12345`
 
-You can request deletion here even if you have uninstalled Pocket Cat or no longer have your old device.
+If the app is installed and you are signed in, you can [delete the cloud account in the app](#delete-the-cloud-account-in-the-app). You can also request deletion here, even if you have uninstalled Pocket Cat or no longer have your old device.
 
 ## Request deletion by email
 
@@ -17,7 +17,7 @@ You can request deletion here even if you have uninstalled Pocket Cat or no long
 
 Or email **[jhyang123494@gmail.com](mailto:jhyang123494@gmail.com)** with the subject **Pocket Cat account and data deletion request**.
 
-1. **If you signed in to an earlier version of Pocket Cat,** tell us which email address you used: your Google email, or for Sign in with Apple, your Apple email or the Hide My Email relay address. Send the request from that address if possible so we can verify ownership.
+1. **If you signed in to Pocket Cat,** tell us which email address you used: your Google email, or for Sign in with Apple, your Apple email or the Hide My Email relay address. Send the request from that address if possible so we can verify ownership.
 2. **Say what you want deleted:** your account and all associated data, or only specified data.
 3. **For gameplay statistics,** give the approximate date you installed the app. Statistics are tied to a random app ID rather than an account, so this helps us find them.
 4. **If you bought gems,** include an approximate purchase date or the order ID from your Google Play or App Store receipt if available. This helps locate RevenueCat records, including those of anonymous installations. You can request deletion without making a purchase or having an order ID.
@@ -26,8 +26,8 @@ We may need to verify ownership before deleting anything. We will reply with any
 
 ## What the request covers
 
-- The Pocket Cat Firebase Authentication account from an earlier version, including its email and the Google or Apple sign-in profile information.
-- That account's cloud save: your cat, Bond, gems, purchase-credit ledger, treats, cosmetics, saved gameplay preferences, postcard metadata and save-coordination metadata.
+- Your Pocket Cat Firebase Authentication account, including its email and the Google or Apple sign-in profile information.
+- That account's cloud saves, the current one and any from the earlier version: your cat, Bond, gems, purchase-credit ledger, items, room layouts, postcard progress, saved gameplay preferences and save-coordination metadata.
 - RevenueCat customer and purchase records associated with your account or installation that we can identify. We delete them within 30 days of your request.
 - Gameplay statistics and crash reports we can match to your installation. They are deleted automatically anyway after the periods in the [privacy policy](../#gameplay-statistics-and-crash-reports).
 
@@ -37,6 +37,18 @@ Firebase documents an Authentication deletion period of up to 180 days for live 
 
 We cannot remotely remove a game save or photos that exist only on a device. On Android, clear Pocket Cat's app data or uninstall it to remove app-private local data; on iPhone, delete the app. Delete saved or shared photos separately from your device's gallery or the Photos app.
 
-In-app deletion of a cloud account will be available again when optional sign-in returns in a later update. Signing out, uninstalling or clearing app data alone does not delete an earlier cloud account.
+Signing out, uninstalling or clearing app data alone does not delete a cloud account.
+
+## Delete the cloud account in the app
+
+In Pocket Cat, open **Settings → Account & cloud save → Delete cloud account**, then confirm the same Apple or Google account you linked to your cat. Internet access is required. This happens immediately:
+
+- Pocket Cat removes both cloud saves (the current one and any from the earlier version).
+- It removes the Firebase account.
+- For an Apple account, it revokes its Sign in with Apple authorization.
+
+Your purchase records at RevenueCat are queued for deletion and removed within 30 days. Your cat remains on the device as a guest.
+
+On Android, in-app deletion arrives with the update that brings sign-in back. Until your app has it, use the email request above.
 
 [Read the Pocket Cat privacy policy](../) · [한국어 개인정보 처리방침](../ko/)

@@ -8,6 +8,6 @@ Public privacy documents for the **Pocket Cat** Android and iPhone apps (`com.po
 - [Support](support.md) — contact details at [/support/](https://jhyang12345.github.io/pocket-cat-privacy/support/), the App Store support URL.
 - [Google Play Data Safety draft](data-safety.md) — release-review guidance for the Play Console form. New Firebase answers are a draft until submitted.
 
-The ready-to-apply cloud-save section for the Unity sign-in release is in [drafts/cloud-save-section.md](drafts/cloud-save-section.md). Publishing these documents and changing Play Console answers are separate release actions.
+The Unity sign-in and cloud save were added to these documents on 2026-10-26. Publishing these documents and changing Play Console answers are separate release actions.
 
 Changes to these documents are tracked in this repository's history.

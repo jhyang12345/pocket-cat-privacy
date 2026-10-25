@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-10-23 (Android from the first update with gameplay statistics, with Meta Audience Network from the first update that includes it; iPhone from the first version built on the shared game)
+**Effective date:** 2026-10-26 (Android from the first update with gameplay statistics, with Meta Audience Network and with sign-in from the first updates that include them; iPhone from the first version built on the shared game)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.galchi`)
 
@@ -10,7 +10,7 @@
 
 **한국어:** [개인정보 처리방침 (한국어)](ko/). For players in Korea, the Korean policy is the authoritative version and includes the items required by Korea's Personal Information Protection Act.
 
-Pocket Cat is a game about caring for one cat. You play on your device; no account is needed.
+Pocket Cat is a game about caring for one cat. You can play as a guest on your device, or sign in to keep a cloud save for recovery after reinstalling or changing phones: with Google on Android, and with Apple or Google on iPhone. No account is needed to play.
 
 ## The short version
 
@@ -19,7 +19,8 @@ Pocket Cat is a game about caring for one cat. You play on your device; no accou
 - Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat.
 - Ads are **optional rewarded videos** requested through Google AdMob; on Android they may also come from Meta Audience Network. They appear in the shop for a few gems, and in the minigames to get paws back or open the next levels early. You choose to watch them; nothing in the game requires it, and there are no banners or ads that interrupt play.
 - Pocket Cat does not sell your data.
-- If you signed in to an earlier version of Pocket Cat, that account and its cloud save still exist; see [Accounts from the earlier version](#accounts-from-the-earlier-version). You can [request account and data deletion](delete-account/) at any time.
+- Sign-in is optional: Google on Android, and Sign in with Apple or Google on iPhone. Signed-in game saves are stored in Google's Cloud Firestore in Seoul. Photos and device settings stay on your device. See [Sign-in and cloud saves](#sign-in-and-cloud-saves).
+- Uninstalling the app does not delete your cloud account. You can delete it in the app, or [request account and data deletion](delete-account/) without the app.
 
 ## Data on your device
 
@@ -54,21 +55,35 @@ This data is not linked to an account, so it cannot be looked up from your name 
 
 Google processes this data for us as a service provider. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
-## Accounts from the earlier version
+## Sign-in and cloud saves
 
-The earlier version of Pocket Cat let you sign in to keep a cloud save: with Google on Android, and with Apple or Google on iPhone. If you signed in, those records still exist:
+Sign-in is optional. It creates a Pocket Cat account in Firebase Authentication with Google (Android and iPhone) or Sign in with Apple (iPhone). Firebase holds a user identifier, your email address (or an Apple private relay address if you choose Hide My Email) and the name your provider shares. The app shows the email in Settings. Pocket Cat never receives your Google or Apple password.
 
-- **Firebase Authentication** holds your account: a user identifier, your email address, and the name and profile-picture URL your provider shared. With Sign in with Apple, it may hold an Apple private relay address instead of your email.
-- **Cloud Firestore** holds that version's cloud save under your user identifier: your cat and progress, gem balance and purchase-credit records, saved gameplay preferences and postcard metadata, with a save revision, an update time and a random installation identifier.
-- **RevenueCat** may continue to use your Firebase user identifier as your purchase identity on that device, so earlier purchases stay connected.
+When you sign in, Pocket Cat keeps one cloud save for your account in Google's Cloud Firestore (region asia-northeast3, Seoul). The cloud save contains:
 
-The current version does not offer sign-in yet. Optional sign-in and cloud saving will return in a later update, and this policy will be updated before it does. Until then, use the [deletion page](delete-account/) or email us to delete an earlier account and its cloud save.
+- your cat's name and coat, Bond and progress;
+- your gem balance and gem history;
+- the identifiers of your purchases and ad rewards, used so a purchase is never credited twice;
+- the items you own and the furniture layout of each room;
+- your postcard progress.
 
-Firebase Authentication is processed in the United States; other Google services may process information internationally. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy) and the [Apple Privacy Policy](https://www.apple.com/legal/privacy/) for Sign in with Apple.
+It also records when it was saved and a random identifier for this installation. Only your signed-in account can read or write it. Photos and device settings such as language and sound are never uploaded. On your device, the app also remembers which account protects your cat.
+
+If you used the earlier version of Pocket Cat with the same account, a new installation that has no cat yet may read that earlier cloud save once, to offer bringing your cat over. Pocket Cat never changes the earlier save. Accounts from the earlier version, with the name and profile-picture URL their provider shared, still exist until you delete them.
+
+While you are signed in, RevenueCat uses your Firebase user identifier as your purchase identity. When you sign out or delete the account, it returns to an anonymous identifier. Gameplay statistics are never linked to your sign-in.
+
+On Android, sign-in returns with the first update that includes it. Until your app has it, use the [deletion page](delete-account/) or email us to delete an earlier account and its cloud save.
+
+Firebase Authentication is processed in the United States, and the cloud save is stored in Seoul. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy), the [Google Privacy Policy](https://policies.google.com/privacy) and, for Sign in with Apple, the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
+
+### Sign in with Apple (iPhone)
+
+Pocket Cat checks at launch whether you still allow Sign in with Apple, and signs out on the device if you have stopped using it with Pocket Cat. When you delete your cloud account in the app, Pocket Cat also revokes its Sign in with Apple authorization. You can stop using Sign in with Apple with Pocket Cat at any time in your Apple Account settings.
 
 ## Device backups
 
-If Android backup is enabled, Android may back up the game save and the app's local preferences, or transfer them between devices, under Google's backup terms. The preferences include the anonymous purchase identity, so a restored save keeps its purchases. Photos, caches and the earlier version's web storage are excluded. You can manage Android backup in your device settings.
+If Android backup is enabled, Android may back up the game save, the app's local preferences and which account protects your cat, or transfer them between devices, under Google's backup terms. The preferences include the anonymous purchase identity, so a restored save keeps its purchases. Photos, caches and the earlier version's web storage are excluded. You can manage Android backup in your device settings.
 
 On iPhone, iCloud Backup or a backup to a computer may include Pocket Cat's local game save under Apple's terms.
 
@@ -80,8 +95,8 @@ Pocket Cat sells optional one-time gem packs. Care and play are always free, and
 
 - **Google Play** handles payment on Android. Pocket Cat does not receive card or bank details. Google's handling of payment records is covered by the [Google Play Terms of Service](https://play.google.com/about/play-terms/) and [Google Privacy Policy](https://policies.google.com/privacy).
 - **The App Store** handles payment on iPhone. Pocket Cat does not receive card or bank details. Apple's handling of payment records is covered by the [Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/) and the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
-- **RevenueCat** verifies purchases and processes purchase history and refunds. It receives Google Play purchase tokens or App Store transaction information, products and transaction details, an app-user identifier, and service-related app/device information. Its customer records can include country information from a transaction or the connection's IP address. The identifier is anonymous, or the Firebase user identifier from an earlier sign-in. Pocket Cat does not send your email or name to RevenueCat. See the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
-- **Your gem balance** and purchase-credit ledger live in the game save on your device and in device backups. Gems have no cash value and cannot be transferred.
+- **RevenueCat** verifies purchases and processes purchase history and refunds. It receives Google Play purchase tokens or App Store transaction information, products and transaction details, an app-user identifier, and service-related app/device information. Its customer records can include country information from a transaction or the connection's IP address. The identifier is anonymous, or your Firebase user identifier while you are signed in (or from an earlier version's sign-in). Pocket Cat does not send your email or name to RevenueCat. See the [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/).
+- **Your gem balance** and purchase-credit ledger live in the game save on your device and in device backups, and in your cloud save if you sign in. Gems have no cash value and cannot be transferred.
 
 RevenueCat processes information as a service provider. Purchase information is used for purchase handling, provider reporting and fraud prevention; it is not used for advertising or sold by Pocket Cat.
 
@@ -117,21 +132,30 @@ Ads are requested through **Google AdMob**. On Android, AdMob holds an auction f
 
 ## Where data is processed
 
-Google (Firebase, AdMob, Google Play), Meta (Audience Network, on Android) and RevenueCat are based in the United States and may process data there and in other countries where they operate. Apple processes App Store payments under its own terms. Pocket Cat itself does not run servers that store your data. Players in Korea can find the overseas-transfer details required by Korean law in the [Korean policy](ko/#overseas-transfer).
+Google (Firebase, AdMob, Google Play), Meta (Audience Network, on Android) and RevenueCat are based in the United States and may process data there and in other countries where they operate. Apple processes App Store payments under its own terms. Signed-in cloud saves are stored in Google's Cloud Firestore in Seoul (asia-northeast3). Pocket Cat itself does not run servers that store your data. Players in Korea can find the overseas-transfer details required by Korean law in the [Korean policy](ko/#overseas-transfer).
 
 ## Your choices and rights
 
 - Turn gameplay statistics and crash reports off in **Settings → Share usage and crash data**.
 - Change ad consent in **Settings → Privacy options** where it applies, and reset or delete your advertising ID in Android settings.
-- Ask us to access, correct or delete data we hold or can request from our providers: an earlier account and cloud save, RevenueCat purchase records, or gameplay statistics (include your install date). Email [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com) or use the [deletion page](delete-account/). We may ask for information needed to verify ownership and will reply with the result, including anything that cannot be removed and why.
+- See your account and its last cloud save in **Settings → Account & cloud save**, sign out there, or delete the cloud account.
+- Ask us to access, correct or delete data we hold or can request from our providers: your account and cloud save, RevenueCat purchase records, or gameplay statistics (include your install date). Email [jhyang123494@gmail.com](mailto:jhyang123494@gmail.com) or use the [deletion page](delete-account/). We may ask for information needed to verify ownership and will reply with the result, including anything that cannot be removed and why.
 - To remove the data on your device, clear Pocket Cat's app data or uninstall it on Android, or delete the app on iPhone. Photos you saved to your gallery or Photos library stay there until you remove them.
 
 ## Retention and deletion
 
+In the app, open **Settings → Account & cloud save → Delete cloud account** and confirm your Apple or Google account. This happens immediately:
+
+- Pocket Cat deletes your cloud save, including any save from the earlier version of the app.
+- It deletes your Firebase Authentication account.
+- For an Apple account, it revokes its Sign in with Apple authorization.
+
+It also queues your purchase records at RevenueCat for deletion, and we complete that within 30 days. Your cat stays on this device as guest data. Payment records kept by Google Play and the App Store follow their own policies.
+
 - **On your device:** kept until you delete the app's data or the app.
 - **Gameplay statistics and crash reports:** as described above (2 months, up to 90 days of raw events, 90 days of crash reports, and up to 13 months of totals that identify no one).
-- **Earlier accounts and cloud saves:** kept while the account exists, and deleted when you ask. Firebase documents that logged Authentication IP addresses are kept for a few weeks, and that other Authentication information is removed from its live and backup systems within 180 days after deletion is initiated.
-- **RevenueCat purchase records:** deleted when you ask, within 30 days.
+- **Accounts and cloud saves:** kept while the account exists, and deleted when you delete it in the app or ask us. Firebase documents that logged Authentication IP addresses are kept for a few weeks, and that other Authentication information is removed from its live and backup systems within 180 days after deletion is initiated.
+- **RevenueCat purchase records:** deleted within 30 days of an in-app account deletion or a request.
 - **Store payment records:** Google Play and App Store records follow Google's and Apple's own retention policies.
 - **Ad data:** data held by Google or Meta is governed by their own retention and controls.
 - **Support emails:** used to verify and handle your request.
