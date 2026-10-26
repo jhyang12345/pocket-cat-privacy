@@ -9,7 +9,7 @@
   - players who signed in earlier still reach RevenueCat under their Firebase user ID.
 - **Sign-in returns (owner, 2026-10-26).** Unity release builds after 0.5.103 (119) include optional Google sign-in and the Unity cloud save by default (`tools/unity-build.ps1`; `-NoCloudSave` leaves it out). The State C rows already cover it: the Unity save adds room layouts and postcard progress to the same gameplay data. The Play form needs no change; the deletion URL stays the account-deletion answer, and the app adds Settings → Account & cloud save → Delete cloud account.
 - **Rewarded ads now also appear in the minigames** (paws back, next levels early), besides the shop. The data types and the AdMob sharing rows do not change.
-- **The next release adds gameplay statistics and crash reports** (Google Analytics for Firebase, Firebase Crashlytics). Apply the "Analytics release" changes below with it.
+- **Gameplay statistics and crash reports ship with 0.5.103 (119)** (Google Analytics for Firebase, Firebase Crashlytics). Checked in Play Console on 2026-10-26: the "Analytics release" answers below are entered and approved. They wait under Publishing overview → Changes ready to publish, together with the 119 production release. One difference from the State C table: Purchase history lists App functionality and Fraud prevention, but not Analytics.
 - **Target audience:** 13 and over; not a Families app (owner decision, 2026-10-23).
 
 ## Overall form answers
