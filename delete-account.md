@@ -49,6 +49,6 @@ In Pocket Cat, open **Settings → Account & cloud save → Delete cloud account
 
 Your purchase records at RevenueCat are queued for deletion and removed within 30 days. Your cat remains on the device as a guest.
 
-On Android, in-app deletion arrives with the update that brings sign-in back. Until your app has it, use the email request above.
+On Android, in-app deletion arrives with sign-in in 0.5.104. Until your app has that version, use the email request above.
 
 [Read the Pocket Cat privacy policy](../) · [한국어 개인정보 처리방침](../ko/)
