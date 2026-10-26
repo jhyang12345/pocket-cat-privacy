@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-10-26 (Android from the first update with gameplay statistics, with Meta Audience Network, with sign-in and with the questions after adoption from the first updates that include them; iPhone from the first version built on the shared game)
+**Effective date:** 2026-10-26 (Android from the first updates with gameplay statistics and with Meta Audience Network, and from 0.5.104 for sign-in and the questions after adoption; iPhone from the first version built on the shared game)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.app`)
 
@@ -15,7 +15,7 @@ Pocket Cat is a game about caring for one cat. You can play as a guest on your d
 ## The short version
 
 - Core gameplay works offline. Your cat and your progress are saved on your device.
-- Pocket Cat sends gameplay statistics and crash reports to Google's Firebase so we can see where the game is confusing and fix crashes. They are tied to a random app ID, not to your name or any account, and never include your cat's name or anything you type. If your App Store or Google Play account is in the European Economic Area or Switzerland, nothing is sent unless you turn it on; elsewhere it is on until you turn it off. Versions with the questions after adoption (on Android, from the first update after 0.5.103) ask about this right after you adopt your cat, and you can change your answer at any time in **Settings → Share usage and crash data**.
+- Pocket Cat sends gameplay statistics and crash reports to Google's Firebase so we can see where the game is confusing and fix crashes. They are tied to a random app ID, not to your name or any account, and never include your cat's name or anything you type. In the European Economic Area and Switzerland nothing is sent unless you turn it on, and elsewhere it is on until you turn it off; the app goes by your App Store or Google Play country, or by your SIM or phone region when that isn't available. Versions with the questions after adoption (on Android, from 0.5.104) ask about this right after you adopt your cat, and you can change your answer at any time in **Settings → Share usage and crash data**.
 - Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat.
 - Ads are **optional rewarded videos** requested through Google AdMob; on Android they may also come from Meta Audience Network. They appear in the shop for a few gems, and in the minigames to get paws back or open the next levels early. You choose to watch them; nothing in the game requires it, and there are no banners or ads that interrupt play.
 - Pocket Cat does not sell your data.
@@ -30,13 +30,13 @@ Photos you take in the cat studio or Photo Mode stay in the app's private storag
 
 Postcards, if you turn them on, are scheduled on your device and shown as local notifications. No notification server is involved and the notes never leave your phone. If gameplay statistics are on, they record when postcards are offered or turned on or off, whether notifications are allowed, and when a postcard arrives or is opened, never its text.
 
-On Android, the app uses internet access, network-state access and Google Play Billing for statistics, purchases and the optional ads; the advertising ID permission added by the Google Mobile Ads SDK; the notification permission if you turn postcards on; and the install-referrer service that Google Analytics for Firebase reads to learn which store listing or link led to the install. The app does not request access to your location, contacts, camera or microphone.
+On Android, the app uses internet access, network-state access and Google Play Billing for statistics, purchases, the optional ads and cloud saves; the advertising ID permission and Android's ad-services permissions (advertising ID, attribution and topics) declared by the Google Mobile Ads SDK; the notification permission if you turn postcards on, and permission to start after your phone restarts so postcards stay on schedule; vibration for haptic feedback; background-work permissions used by the postcard scheduler and Google's libraries; and the install-referrer service that Google Analytics for Firebase reads to learn which store listing or link led to the install. Android also lists storage permissions, which Android 9 and earlier need to save a photo to your gallery; Pocket Cat does not read your other files. The app does not request access to your location, contacts, camera or microphone.
 
 On iPhone, saving a picture adds it to your Photos library with add-only access, so Pocket Cat cannot see or read anything else in your library. If you turn postcards on, iOS asks whether Pocket Cat may send notifications. Pocket Cat does not request access to your location, contacts, camera or microphone, and it never asks to track you, so iOS does not give the app or its ads SDK your device's advertising identifier.
 
 ## Gameplay statistics and crash reports
 
-Pocket Cat sends gameplay statistics through Google Analytics for Firebase and crash reports through Firebase Crashlytics. Versions with the questions after adoption (on Android, from the first update after 0.5.103) ask about this right after you adopt a cat: where your consent is needed, nothing is sent unless you choose Share; elsewhere the question tells you that sending is on and lets you turn it off. Earlier versions do not ask and use the default below. You can change your answer at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, it is off until you turn it on. Everywhere else, including the United Kingdom and Korea, it is on until you turn it off. To tell which applies, the app uses your store account's country or, when that is not available, your SIM card's country or your phone's region setting. If none is available, it stays off. The country is used on your device only to choose this default and is not sent to us.
+Pocket Cat sends gameplay statistics through Google Analytics for Firebase and crash reports through Firebase Crashlytics. Versions with the questions after adoption (on Android, from 0.5.104) ask about this right after you adopt a cat: where your consent is needed, nothing is sent unless you choose Share; elsewhere the question tells you that sending is on and lets you turn it off. Earlier versions do not ask and use the default below. You can change your answer at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, it is off until you turn it on. Everywhere else, including the United Kingdom and Korea, it is on until you turn it off. To tell which applies, the app uses your store account's country or, when that is not available, your SIM card's country or your phone's region setting. If none is available, it stays off. The country is used on your device only to choose this default and is not sent to us.
 
 **What is sent:** which screens you open and which game features you use (for example adopting, finishing a daily quest, starting or clearing a minigame, buying an item with gems, starting, completing or refunding a gem-pack purchase (which pack and the result, never the receipt), choosing to watch an optional ad, turning postcards on or off, or moving rooms), how many days since adoption and how long you play, and, when the app crashes, technical details about the crash with your device model and system version. Each record carries a random identifier that Firebase creates for this installation. Google Analytics for Firebase also receives your IP address, from which it derives an approximate region, and on Android the install referrer described above.
 
@@ -57,7 +57,7 @@ Google processes this data for us as a service provider. See [Firebase's privacy
 
 ## Sign-in and cloud saves
 
-Sign-in is optional. It creates a Pocket Cat account in Firebase Authentication with Google (Android and iPhone) or Sign in with Apple (iPhone). Firebase holds a user identifier, your email address (or an Apple private relay address if you choose Hide My Email) and the name your provider shares. The app shows the email in Settings. Pocket Cat never receives your Google or Apple password.
+Sign-in is optional. It creates a Pocket Cat account in Firebase Authentication with Google (Android and iPhone) or Sign in with Apple (iPhone). Firebase holds a user identifier, your email address (or an Apple private relay address if you choose Hide My Email) and the name and profile-picture address your provider shares. The app shows the email in Settings. Pocket Cat never receives your Google or Apple password.
 
 When you sign in, Pocket Cat keeps one cloud save for your account in Google's Cloud Firestore (region asia-northeast3, Seoul). The cloud save contains:
 
@@ -73,7 +73,7 @@ If you used the earlier version of Pocket Cat with the same account, a new insta
 
 While you are signed in, RevenueCat uses your Firebase user identifier as your purchase identity. When you sign out or delete the account, it returns to an anonymous identifier. Gameplay statistics are never linked to your sign-in.
 
-On Android, sign-in returns with the first update that includes it. Until your app has it, use the [deletion page](delete-account/) or email us to delete an earlier account and its cloud save.
+On Android, sign-in returns in 0.5.104. Until your app has that version, use the [deletion page](delete-account/) or email us to delete an earlier account and its cloud save.
 
 Firebase Authentication is processed in the United States, and the cloud save is stored in Seoul. See [Firebase's privacy and security information](https://firebase.google.com/support/privacy), the [Google Privacy Policy](https://policies.google.com/privacy) and, for Sign in with Apple, the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
 
@@ -111,7 +111,7 @@ You can choose to watch a short video ad, each a limited number of times a day:
 Ads are requested through **Google AdMob**. On Android, AdMob holds an auction for each ad in which **Meta Audience Network** can also bid, so the video may come from Google or from Meta. On iPhone, ads come from Google AdMob only. There are no banners and nothing interrupts play.
 
 - **Consent first.** In the EEA, the UK and Switzerland, the app asks for your consent with Google's consent form before any ad is requested. The form lists Meta among the ad partners, and your choice applies to it too. You can change your choice at any time from **Settings → Privacy options**.
-- **When ads start.** In versions with the questions after adoption (on Android, from the first update after 0.5.103), right after our own question about usage data, the app checks with Google whether the law needs your ad consent and, where it does, shows Google's consent form. In earlier versions, or if you adopted your cat before this check was added, the form waits until an ad offer is first on screen. The ads SDK and the first ad request always wait until an ad offer is first on screen, in the shop or in the minigames. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it. On Android, Meta's SDK may start when the app opens and contact Meta's servers; it bids for and shows an ad only when AdMob asks it to, for an ad you have chosen to watch.
+- **When ads start.** In versions with the questions after adoption (on Android, from 0.5.104), right after our own question about usage data, the app checks with Google whether the law needs your ad consent and, where it does, shows Google's consent form. In earlier versions, or if you adopted your cat before this check was added, the form waits until an ad offer is first on screen. The ads SDK and the first ad request always wait until an ad offer is first on screen, in the shop or in the minigames. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it. On Android, Meta's SDK may start when the app opens and contact Meta's servers; it bids for and shows an ad only when AdMob asks it to, for an ad you have chosen to watch.
 - **What Google AdMob receives** when an ad is requested or shown:
   - a device identifier: on Android, the advertising ID and app set ID; on iPhone, an identifier limited to the app or its developer, because Pocket Cat never asks to track you;
   - approximate location derived from your IP address;
@@ -119,7 +119,7 @@ Ads are requested through **Google AdMob**. On Android, AdMob holds an auction f
   - app and SDK performance (diagnostic) information;
   - for a rewarded ad, the purchase identifier described under In-app purchases (anonymous, or your Firebase user identifier while you are signed in), which Google passes to RevenueCat to confirm your reward.
 
-  Google uses this to serve, measure and personalise ads (where you have allowed personalisation) and to prevent fraud. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
+  Google uses this to serve, measure and personalise ads and to prevent fraud. In the EEA, the UK and Switzerland, ads are personalised only with your consent; elsewhere, on Android, they may be personalised unless you delete your advertising ID. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
 - **What Meta Audience Network receives** (Android only) when it bids for or shows an ad:
   - the advertising ID;
   - information about your device and the app;
@@ -151,12 +151,13 @@ In the app, open **Settings → Account & cloud save → Delete cloud account** 
 - It deletes your Firebase Authentication account.
 - For an Apple account, it revokes its Sign in with Apple authorization.
 
-It also queues your purchase records at RevenueCat for deletion, and we complete that within 30 days. Your cat stays on this device as guest data. Payment records kept by Google Play and the App Store follow their own policies.
+It also queues your purchase records at RevenueCat for deletion, and we complete that within 30 days. The queue keeps your account's user identifier and the time of the request, and the entry is removed once the RevenueCat records are deleted. Your cat stays on this device as guest data. Payment records kept by Google Play and the App Store follow their own policies.
 
 - **On your device:** kept until you delete the app's data or the app.
 - **Gameplay statistics and crash reports:** as described above (2 months, up to 90 days of raw events, 90 days of crash reports, and up to 13 months of totals that identify no one).
 - **Accounts and cloud saves:** kept while the account exists, and deleted when you delete it in the app or ask us. Firebase documents that logged Authentication IP addresses are kept for a few weeks, and that other Authentication information is removed from its live and backup systems within 180 days after deletion is initiated.
 - **RevenueCat purchase records:** deleted within 30 days of an in-app account deletion or a request.
+- **Deletion requests:** the user identifier and request time, kept until the RevenueCat records are deleted (within 30 days).
 - **Store payment records:** Google Play and App Store records follow Google's and Apple's own retention policies.
 - **Ad data:** data held by Google or Meta is governed by their own retention and controls.
 - **Support emails:** used to verify and handle your request, and kept for one year after it is handled.
