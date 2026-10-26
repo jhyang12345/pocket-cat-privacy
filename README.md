@@ -1,6 +1,6 @@
 # Pocket Cat privacy
 
-Public privacy documents for the **Pocket Cat** Android and iPhone apps (`com.pocketcat.galchi`).
+Public privacy documents for the **Pocket Cat** Android and iPhone apps (Android `com.pocketcat.galchi`, iPhone `com.pocketcat.app`).
 
 - [Privacy policy](index.md) — published at [the GitHub Pages site](https://jhyang12345.github.io/pocket-cat-privacy/).
 - [개인정보 처리방침 (Korean)](ko/index.md) — published at [/ko/](https://jhyang12345.github.io/pocket-cat-privacy/ko/); authoritative for players in Korea.

@@ -5,7 +5,7 @@ permalink: /support/
 
 # Pocket Cat support
 
-**Apps:** Pocket Cat for Android and iPhone (`com.pocketcat.galchi`)
+**Apps:** Pocket Cat for Android and iPhone (Android `com.pocketcat.galchi`, iPhone `com.pocketcat.app`)
 
 **Developer:** GitHub account `jhyang12345`
 
