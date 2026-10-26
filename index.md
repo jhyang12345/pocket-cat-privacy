@@ -1,6 +1,6 @@
 # Pocket Cat privacy policy
 
-**Effective date:** 2026-10-26 (Android from the first update with gameplay statistics, with Meta Audience Network and with sign-in from the first updates that include them; iPhone from the first version built on the shared game)
+**Effective date:** 2026-10-26 (Android from the first update with gameplay statistics, with Meta Audience Network, with sign-in and with the questions after adoption from the first updates that include them; iPhone from the first version built on the shared game)
 
 **Apps:** Pocket Cat for Android (package `com.pocketcat.galchi`) and Pocket Cat for iPhone (bundle ID `com.pocketcat.galchi`)
 
@@ -15,7 +15,7 @@ Pocket Cat is a game about caring for one cat. You can play as a guest on your d
 ## The short version
 
 - Core gameplay works offline. Your cat and your progress are saved on your device.
-- Pocket Cat sends gameplay statistics and crash reports to Google's Firebase so we can see where the game is confusing and fix crashes. They are tied to a random app ID, not to your name or any account, and never include your cat's name or anything you type. You can turn this off at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, nothing is sent unless you turn it on.
+- Pocket Cat sends gameplay statistics and crash reports to Google's Firebase so we can see where the game is confusing and fix crashes. They are tied to a random app ID, not to your name or any account, and never include your cat's name or anything you type. The app asks about this right after you adopt your cat, and you can change your answer at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, nothing is sent unless you turn it on.
 - Optional gem purchases use Google Play on Android and the App Store on iPhone, with RevenueCat.
 - Ads are **optional rewarded videos** requested through Google AdMob; on Android they may also come from Meta Audience Network. They appear in the shop for a few gems, and in the minigames to get paws back or open the next levels early. You choose to watch them; nothing in the game requires it, and there are no banners or ads that interrupt play.
 - Pocket Cat does not sell your data.
@@ -36,7 +36,7 @@ On iPhone, saving a picture adds it to your Photos library with add-only access,
 
 ## Gameplay statistics and crash reports
 
-Pocket Cat sends gameplay statistics through Google Analytics for Firebase and crash reports through Firebase Crashlytics. You can turn this off at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, it is off until you turn it on there. Everywhere else, including the United Kingdom and Korea, it is on until you turn it off. To tell which applies, the app uses your store account's country or, when that is not available, your SIM card's country or your phone's region setting. If none is available, it stays off. The country is used on your device only to choose this default and is not sent to us.
+Pocket Cat sends gameplay statistics through Google Analytics for Firebase and crash reports through Firebase Crashlytics. When you adopt a cat, the app asks about this right away: where your consent is needed, nothing is sent unless you choose Share; elsewhere the question tells you that sending is on and lets you turn it off. You can change your answer at any time in **Settings → Share usage and crash data**. If your App Store or Google Play account is in the European Economic Area or Switzerland, it is off until you turn it on. Everywhere else, including the United Kingdom and Korea, it is on until you turn it off. To tell which applies, the app uses your store account's country or, when that is not available, your SIM card's country or your phone's region setting. If none is available, it stays off. The country is used on your device only to choose this default and is not sent to us.
 
 **What is sent:** which screens you open and which game features you use (for example adopting, finishing a daily quest, starting or clearing a minigame, buying an item with gems, choosing to watch an optional ad, or moving rooms), how many days since adoption and how long you play, and, when the app crashes, technical details about the crash with your device model and system version. Each record carries a random identifier that Firebase creates for this installation. Google Analytics for Firebase also receives your IP address, from which it derives an approximate region, and on Android the install referrer described above.
 
@@ -111,7 +111,7 @@ You can choose to watch a short video ad, each a limited number of times a day:
 Ads are requested through **Google AdMob**. On Android, AdMob holds an auction for each ad in which **Meta Audience Network** can also bid, so the video may come from Google or from Meta. On iPhone, ads come from Google AdMob only. There are no banners and nothing interrupts play.
 
 - **Consent first.** In the EEA, the UK and Switzerland, the app asks for your consent with Google's consent form before any ad is requested. The form lists Meta among the ad partners, and your choice applies to it too. You can change your choice at any time from **Settings → Privacy options**.
-- **When ads start.** The consent form, the ads SDK and the first ad request wait until an ad offer is first on screen, in the shop or in the minigames. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it. On Android, Meta's SDK may start when the app opens and contact Meta's servers; it bids for and shows an ad only when AdMob asks it to, for an ad you have chosen to watch.
+- **When ads start.** When you adopt a cat, right after our own question about usage data, the app checks with Google whether the law needs your ad consent and, where it does, shows Google's consent form. If you adopted your cat before this check was added, the form waits until an ad offer is first on screen. The ads SDK and the first ad request always wait until an ad offer is first on screen, in the shop or in the minigames. An ad then loads in the background so it is ready if you choose to watch it, but it is only ever shown when you tap it. On Android, Meta's SDK may start when the app opens and contact Meta's servers; it bids for and shows an ad only when AdMob asks it to, for an ad you have chosen to watch.
 - **What Google AdMob receives** when an ad is requested or shown:
   - a device identifier: on Android, the advertising ID and app set ID; on iPhone, an identifier limited to the app or its developer, because Pocket Cat never asks to track you;
   - approximate location derived from your IP address;
