@@ -136,6 +136,8 @@ Ads are requested through **Google AdMob**. On Android, AdMob holds an auction f
 
 Google (Firebase, AdMob, Google Play), Meta (Audience Network, on Android) and RevenueCat are based in the United States and may process data there and in other countries where they operate. Apple processes App Store payments under its own terms. Signed-in cloud saves are stored in Google's Cloud Firestore in Seoul (asia-northeast3). Pocket Cat itself does not run servers that store your data. Players in Korea can find the overseas-transfer details required by Korean law in the [Korean policy](ko/#overseas-transfer).
 
+Pocket Cat shares data only with the companies named in this policy and only for the purposes described here. Each of them is bound by its terms with us and by its own privacy policy to give that data the same or equal protection as this policy.
+
 ## Your choices and rights
 
 - Turn gameplay statistics and crash reports off in **Settings → Share usage and crash data**.
