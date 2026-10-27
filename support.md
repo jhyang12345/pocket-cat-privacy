@@ -22,6 +22,12 @@ Email **[jhyang123494@gmail.com](mailto:jhyang123494@gmail.com?subject=Pocket%20
 - After reinstalling or changing phones, sign in with the same account to restore your last cloud save. Progress played only as a guest cannot be recovered from another device.
 - To delete your cloud account, see [Delete your Pocket Cat account and data](../delete-account/).
 
+## Purchases
+
+- Gem packs are optional. Care, play and the room are always free, and gems never expire.
+- If you were charged but the gems did not arrive, open Pocket Cat with an internet connection, tap the gem balance at the top of the room and choose **Restore purchases**. If that does not help, email us with the order ID from your receipt.
+- Refunds are handled by the store you paid: on iPhone, request one from Apple at [reportaproblem.apple.com](https://reportaproblem.apple.com); on Android, through Google Play.
+
 ## Statistics, ads and privacy
 
 - Turn gameplay statistics and crash reports off in **Settings → Share usage and crash data**.
