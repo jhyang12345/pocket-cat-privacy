@@ -119,7 +119,7 @@ Ads are requested through **Google AdMob**. On Android, AdMob holds an auction f
   - app and SDK performance (diagnostic) information;
   - for a rewarded ad, the purchase identifier described under In-app purchases (anonymous, or your Firebase user identifier while you are signed in), which Google passes to RevenueCat to confirm your reward.
 
-  Google uses this to serve, measure and personalise ads and to prevent fraud. In the EEA, the UK and Switzerland, ads are personalised only with your consent; elsewhere, on Android, they may be personalised unless you delete your advertising ID. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
+  Google uses this to serve, measure and personalise ads and to prevent fraud. In the EEA, the UK and Switzerland, ads are personalised only with your consent; elsewhere, on Android, they may be personalised unless you delete your advertising ID. On iPhone, Pocket Cat never asks to track you, so Google does not receive your device's advertising identifier and cannot use it to personalise ads. See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) and the [Google Privacy Policy](https://policies.google.com/privacy).
 - **What Meta Audience Network receives** (Android only) when it bids for or shows an ad:
   - the advertising ID;
   - information about your device and the app;
@@ -129,7 +129,8 @@ Ads are requested through **Google AdMob**. On Android, AdMob holds an auction f
 
   Meta uses this to serve and measure ads and to prevent fraud. See the [Meta Privacy Policy](https://www.facebook.com/privacy/policy/).
 - **What RevenueCat receives:** the same app-user identifier used for purchases, ad events (loaded, shown, revenue) and the reward verification result. RevenueCat confirms with Google that the ad was completed, so a reward is only credited for a finished ad.
-- **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads.
+- **Install measurement on iPhone.** Pocket Cat lists the ad networks Google works with for Apple's SKAdNetwork. If an ad you saw in Pocket Cat leads you to install another app, Apple may send that ad network an install report. The report can include Pocket Cat's App Store ID, but nothing that identifies you or your device.
+- **Advertising ID.** You can reset or delete your advertising ID in Android settings (Settings → Privacy → Ads, or Settings → Google → Ads, depending on the device). Deleting it stops personalised ads. On iPhone there is nothing to reset: Pocket Cat never asks for tracking permission, so your advertising identifier stays hidden from the app and its ads SDK.
 
 ## Where data is processed
 
