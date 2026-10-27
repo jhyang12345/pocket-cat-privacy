@@ -24,7 +24,7 @@ Email **[jhyang123494@gmail.com](mailto:jhyang123494@gmail.com?subject=Pocket%20
 
 ## Purchases
 
-- Gem packs are optional. Care, play and the room are always free, and gems never expire.
+- Gem packs are optional. Calling, petting, meals, play and the minigames never cost gems, and gems never expire.
 - If you were charged but the gems did not arrive, open Pocket Cat with an internet connection, tap the gem balance at the top of the room and choose **Restore purchases**. If that does not help, email us with the order ID from your receipt.
 - Refunds are handled by the store you paid: on iPhone, request one from Apple at [reportaproblem.apple.com](https://reportaproblem.apple.com); on Android, through Google Play.
 
